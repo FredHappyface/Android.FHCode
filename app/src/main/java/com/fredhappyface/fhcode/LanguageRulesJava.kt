@@ -1,12 +1,12 @@
 package com.fredhappyface.fhcode
 
-class LanguageRulesJava(): LanguageRules {
+class LanguageRulesJava : LanguageRules {
 
-    private val KEYWORDS: Regex = "(void|boolean|int|float|double)(?=\\s)".toRegex()
+    private val _keywords: Regex = "(void|boolean|int|float|double)(?=\\s)".toRegex()
 
-    override fun matchKeywords(string: CharSequence){
-        KEYWORDS.findAll(string).map {
-            RuleMatch(it.range.first, it.range.last + 1)
+    override fun matchKeywords(string: CharSequence): List<RuleMatch> {
+        return _keywords.findAll(string).map {
+            RuleMatch("keyword", it.range.first, it.range.last + 1)
         }.toList()
     }
 }

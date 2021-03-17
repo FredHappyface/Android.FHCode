@@ -1,4 +1,8 @@
 package com.fredhappyface.fhcode
 
-class Colours {
+import android.text.style.ForegroundColorSpan
+
+interface Colours {
+
+    fun getColour(type: String): ForegroundColorSpan
 }

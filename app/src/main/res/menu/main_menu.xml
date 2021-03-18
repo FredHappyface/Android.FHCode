@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <item
+            android:title="@string/action_new_file"
+            android:orderInCategory="100"
+            android:id="@+id/action_new_file"
+            android:icon="@drawable/settings"
+
+        />
+
+        <item
+            android:title="@string/action_open"
+            android:orderInCategory="100"
+            android:id="@+id/action_open"
+            android:icon="@drawable/settings"
+        />
+
+        <item
+            android:title="@string/action_save"
+            android:orderInCategory="100"
+            android:id="@+id/action_save"
+            android:icon="@drawable/settings"
+        />
+
+        <item
+            android:title="@string/action_save_as"
+            android:orderInCategory="100"
+            android:id="@+id/action_save_as"
+            android:icon="@drawable/settings"
+        />
+
+
+        <item
+            android:title="@string/action_settings"
+            android:orderInCategory="100"
+            android:id="@+id/action_settings"
+            android:icon="@drawable/settings"
+        />
+
+        <item
+            android:title="@string/action_about"
+            android:orderInCategory="100"
+            android:id="@+id/action_about"
+            android:icon="@drawable/settings"
+
+            />
+
+</menu>

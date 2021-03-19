@@ -1,0 +1,108 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme"  parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="navigationBarColor">@color/purple_700</item>
+        <item name="appBarColor">@color/purple_500</item>
+        <item name="appBarTextColor">@color/white</item>
+        <item name="android:navigationBarColor">?attr/navigationBarColor</item>
+        <item name="colorPrimaryDark">?attr/navigationBarColor</item>
+        <item name="colorPrimary">?attr/appBarColor</item>
+        <item name="colorAccent">?attr/foregroundColorAccent</item>
+        <item name="android:textColorPrimary">?attr/foregroundColorPrimary</item>
+        <item name="android:textColorSecondary">?attr/foregroundColorSecondary</item>
+        <item name="android:textColor">?attr/foregroundColorPrimary</item>
+        <item name="android:windowBackground">?attr/backgroundColorPrimary</item>
+
+        
+        <item name="android:popupBackground">?attr/backgroundColorPrimary</item>
+        <item name="popupMenuBackground">?attr/backgroundColorPrimary</item>
+
+    </style>
+
+    <style name="AppTheme.View">
+        <item name="android:background">?attr/backgroundColorPrimary</item>
+    </style>
+
+
+
+
+    <style name="LightTheme" parent="AppTheme">
+        <item name="backgroundColorPrimary">@color/white</item>
+        <item name="backgroundColorSecondary">@color/lightGrey</item>
+
+        <item name="foregroundColorAccent">@color/purple_200</item>
+        <item name="foregroundColorPrimary">@color/black</item>
+        <item name="foregroundColorSecondary">@color/grey</item>
+
+    </style>
+
+    <style name="DarkTheme" parent="AppTheme">
+        <item name="backgroundColorPrimary">@color/darkGrey</item>
+        <item name="backgroundColorSecondary">@color/grey</item>
+
+        <item name="foregroundColorAccent">@color/purple_200</item>
+        <item name="foregroundColorPrimary">@color/white</item>
+        <item name="foregroundColorSecondary">@color/lightGrey</item>
+    </style>
+
+    <style name="BlackTheme" parent="AppTheme">
+        <item name="backgroundColorPrimary">@color/black</item>
+        <item name="backgroundColorSecondary">@color/black</item>
+
+        <item name="foregroundColorAccent">@color/purple_200</item>
+        <item name="foregroundColorPrimary">@color/white</item>
+        <item name="foregroundColorSecondary">@color/white</item>
+
+        <item name="appBarColor">@color/black</item>
+    </style>
+
+
+    <style name="base_container_style">
+        <item name="android:layout_marginLeft">@dimen/text_content_margin</item>
+        <item name="android:layout_marginRight">@dimen/text_content_margin</item>
+        <item name="android:layout_marginTop">@dimen/text_content_margin_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/text_content_margin_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="image_container_style" parent="Widget.MaterialComponents.CardView" >
+        <item name="android:layout_marginLeft">@dimen/text_content_margin</item>
+        <item name="android:layout_marginRight">@dimen/text_content_margin</item>
+        <item name="android:layout_marginTop">@dimen/text_content_margin_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/text_content_margin_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardCornerRadius">8dp</item>
+    </style>
+
+    <style name="heading_text_style" parent="base_container_style">
+        <item name="android:textColor">?attr/foregroundColorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_h1</item>
+        <item name="android:fontFamily">@font/firacode</item>
+    </style>
+
+    <style name="heading2_text_style" parent="heading_text_style">
+        <item name="android:textSize">@dimen/text_size_h2</item>
+    </style>
+
+    <style name="body_text_style" parent="heading2_text_style">
+        <item name="android:textSize">@dimen/text_size_body</item>
+    </style>
+
+
+
+
+    <style name="radio_style" parent="body_text_style">
+        <item name="android:buttonTint">?attr/foregroundColorAccent</item>
+    </style>
+
+</resources>

@@ -8,7 +8,7 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.EditText
 
-class ActivityMain : AppCompatActivity() {
+class ActivityMain : ActivityThemable() {
 
     // Keep track of ...
     // - the file name/ id

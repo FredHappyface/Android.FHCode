@@ -11,7 +11,7 @@
         android:gravity="top|start"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#FFFFFF"
+        android:background="?attr/backgroundColorPrimary"
         android:ems="10"
         android:inputType=""
         android:text=""

@@ -13,21 +13,13 @@
     <string name="title_activity_about">FHCode - About</string>
     <string name="title_activity_settings">FHCode - Settings</string>
 
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
 
-    <!-- Messages Preferences -->
-    <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+    <string name="settings_theme_radio1">Light</string>
+    <string name="settings_theme_radio2">Dark</string>
+    <string name="settings_theme_radio3">Black</string>
+    <string name="settings_theme_radio4">System</string>
 
-    <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
-    </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <string name="title_activity_about2">ActivityAbout2</string>
+
 
 
 </resources>

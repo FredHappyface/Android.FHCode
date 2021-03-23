@@ -4,7 +4,6 @@ import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.text.HtmlCompat
 import androidx.preference.PreferenceManager
 
 
@@ -19,7 +18,6 @@ open class ActivityThemable: AppCompatActivity() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //supportActionBar!!.title = HtmlCompat.fromHtml("<font color='#FFFFFF'>FHCode</font>", HtmlCompat.FROM_HTML_MODE_LEGACY)
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
         currentTheme = sharedPreferences.getInt("theme", 3)
         when (currentTheme) {
@@ -34,8 +32,8 @@ open class ActivityThemable: AppCompatActivity() {
     }
 
     /**
-     * Triggered when an activity is resumed. If the theme differs from the currently active theme, then the activity is
-     * recreated
+     * Triggered when an activity is resumed. If the theme differs from the currently active theme,
+     * then the activity is recreated
      */
     override fun onResume() {
         super.onResume()

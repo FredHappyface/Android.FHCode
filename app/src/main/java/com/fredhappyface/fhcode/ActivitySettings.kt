@@ -1,18 +1,22 @@
 package com.fredhappyface.fhcode
 
-import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 import com.google.android.material.card.MaterialCardView
 
 
 class ActivitySettings : ActivityThemable() {
 
+    /**
+     * Override the onCreate method from ActivityThemable adding the activity_settings view and selecting
+     * the current theme
+     *
+     * @param savedInstanceState saved state
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
@@ -28,7 +32,7 @@ class ActivitySettings : ActivityThemable() {
 
     fun changeTheme(view: View) {
         var idx = 3
-        when (view.getId()) {
+        when (view.id) {
             R.id.radioLight -> idx = 0
             R.id.radioDark -> idx = 1
             R.id.radioBlack -> idx = 2

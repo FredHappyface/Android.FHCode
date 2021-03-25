@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/AppTheme"
     tools:context=".ActivityMain">
 
     <EditText
         android:id="@+id/codeHighlight"
         android:gravity="top|start"
+        style="@style/body_text_style"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="?attr/backgroundColorPrimary"

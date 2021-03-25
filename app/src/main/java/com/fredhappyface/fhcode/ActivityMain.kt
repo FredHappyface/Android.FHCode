@@ -179,7 +179,7 @@ class ActivityMain : ActivityThemable() {
     private fun writeTextToUri(uri: Uri): Boolean {
         val codeEditText: EditText = findViewById(R.id.codeHighlight)
         try {
-            contentResolver.openFileDescriptor(uri, "rwt")?.use {
+            contentResolver.openFileDescriptor(uri, "rwt")?.use { it ->
                 FileOutputStream(it.fileDescriptor).use {
                     val bytes = codeEditText.text.toString()
                         .toByteArray()

@@ -1,12 +1,10 @@
 <resources>
-    <dimen name="fab_margin">16dp</dimen>
-
-<dimen name="text_size_h1">20dp</dimen>
-<dimen name="text_size_h2">16dp</dimen>
-<dimen name="text_size_body">14dp</dimen>
-<dimen name="text_content_padding">8dp</dimen>
-<dimen name="text_content_margin">12dp</dimen>
-<dimen name="text_content_margin_vertical">6dp</dimen>
-<dimen name="corner_radius">4dp</dimen>
+    <dimen name="text_size_h1">24dp</dimen>
+    <dimen name="text_size_h2">20dp</dimen>
+    <dimen name="text_size_body">18dp</dimen>
+    <dimen name="text_content_padding">8dp</dimen>
+    <dimen name="text_content_margin">12dp</dimen>
+    <dimen name="text_content_margin_vertical">6dp</dimen>
+    <dimen name="corner_radius">4dp</dimen>
 
 </resources>

@@ -2,8 +2,6 @@
 <resources>
     <color name="magenta">#ffaa37d7</color>
     <color name="magenta_light">#FFBB61E0</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 

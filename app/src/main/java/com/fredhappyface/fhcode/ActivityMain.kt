@@ -9,7 +9,9 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.EditText
+import androidx.appcompat.app.AlertDialog
 import java.io.*
+
 
 class ActivityMain : ActivityThemable() {
 
@@ -68,6 +70,7 @@ class ActivityMain : ActivityThemable() {
         // Handle item selection
         return when (item.itemId) {
             R.id.action_new_file -> {
+                showDialogMessage("To implement")
                 true
             }
             R.id.action_open -> {
@@ -94,6 +97,15 @@ class ActivityMain : ActivityThemable() {
         }
     }
 
+    private fun showDialogMessage(message: String="Saved!"){
+        val alertDialog: AlertDialog = AlertDialog.Builder(this, R.style.DialogTheme).create()
+        alertDialog.setTitle(message)
+        alertDialog.setButton(
+            AlertDialog.BUTTON_NEUTRAL, "OK"
+        ) { dialog, which -> dialog.dismiss() }
+        alertDialog.show()
+    }
+
 
     /**
      * Call this when the user clicks menu -> save
@@ -103,8 +115,10 @@ class ActivityMain : ActivityThemable() {
         if (_uri != null) {
             Log.e("FHCODE_0", _uri.toString())
             writeTextToUri(_uri!!)
+            showDialogMessage()
         } else {
             Log.e("FHCODE_0", "_uri is null!")
+            showDialogMessage("Please save as")
         }
 
     }
@@ -152,7 +166,7 @@ class ActivityMain : ActivityThemable() {
     private fun completeFileSaveAs(data: Intent?) {
         _uri = data!!.data
         writeTextToUri(_uri!!)
-
+        showDialogMessage()
     }
 
 

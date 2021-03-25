@@ -2,13 +2,13 @@
     <!-- Base application theme. -->
     <style name="AppTheme"  parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimaryVariant">@color/magenta</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="navigationBarColor">@color/purple_700</item>
-        <item name="appBarColor">@color/purple_500</item>
+        <item name="navigationBarColor">@color/magenta</item>
+        <item name="appBarColor">@color/magenta</item>
         <item name="appBarTextColor">@color/white</item>
         <item name="android:navigationBarColor">?attr/navigationBarColor</item>
         <item name="colorPrimaryDark">?attr/navigationBarColor</item>
@@ -20,15 +20,25 @@
         <item name="android:windowBackground">?attr/backgroundColorPrimary</item>
 
         
-        <item name="android:popupBackground">?attr/backgroundColorPrimary</item>
-        <item name="popupMenuBackground">?attr/backgroundColorPrimary</item>
+        <item name="android:popupBackground">?attr/backgroundColorSecondary</item>
+        <item name="popupMenuBackground">?attr/backgroundColorSecondary</item>
+
+        <item name="android:dialogTheme">@style/DialogTheme</item>
+
+
 
     </style>
 
-    <style name="AppTheme.View">
-        <item name="android:background">?attr/backgroundColorPrimary</item>
-    </style>
+    <style name="DialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
+        <item name="android:textColorPrimary">?attr/foregroundColorPrimary</item>
+        <item name="android:textColorSecondary">?attr/foregroundColorSecondary</item>
+        <item name="android:textColor">?attr/foregroundColorPrimary</item>
+        <item name="android:windowBackground">?attr/backgroundColorSecondary</item>
+        <item name="colorAccent">?attr/foregroundColorAccent</item>
+        <!-- Set the button colour -->
+        <item name="colorPrimary">?attr/foregroundColorAccent</item>
 
+    </style>
 
 
 
@@ -36,7 +46,7 @@
         <item name="backgroundColorPrimary">@color/white</item>
         <item name="backgroundColorSecondary">@color/lightGrey</item>
 
-        <item name="foregroundColorAccent">@color/purple_200</item>
+        <item name="foregroundColorAccent">@color/magenta</item>
         <item name="foregroundColorPrimary">@color/black</item>
         <item name="foregroundColorSecondary">@color/grey</item>
 
@@ -46,7 +56,7 @@
         <item name="backgroundColorPrimary">@color/darkGrey</item>
         <item name="backgroundColorSecondary">@color/grey</item>
 
-        <item name="foregroundColorAccent">@color/purple_200</item>
+        <item name="foregroundColorAccent">@color/magenta</item>
         <item name="foregroundColorPrimary">@color/white</item>
         <item name="foregroundColorSecondary">@color/lightGrey</item>
     </style>
@@ -55,7 +65,7 @@
         <item name="backgroundColorPrimary">@color/black</item>
         <item name="backgroundColorSecondary">@color/black</item>
 
-        <item name="foregroundColorAccent">@color/purple_200</item>
+        <item name="foregroundColorAccent">@color/magenta</item>
         <item name="foregroundColorPrimary">@color/white</item>
         <item name="foregroundColorSecondary">@color/white</item>
 

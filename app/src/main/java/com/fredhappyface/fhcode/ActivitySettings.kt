@@ -26,7 +26,7 @@ class ActivitySettings : ActivityThemable() {
         val cardView = themeChoices.getChildAt(currentTheme) as MaterialCardView
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             cardView.strokeWidth = (3 * applicationContext.resources.displayMetrics.density).toInt()
-            cardView.strokeColor = resources.getColor(R.color.purple_500, theme)
+            cardView.strokeColor = resources.getColor(R.color.magenta, theme)
         }
     }
 

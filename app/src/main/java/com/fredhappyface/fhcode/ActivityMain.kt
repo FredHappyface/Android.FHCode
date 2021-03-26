@@ -2,14 +2,17 @@ package com.fredhappyface.fhcode
 
 import android.app.Activity
 import android.content.Intent
+import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.webkit.MimeTypeMap
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
+import androidx.preference.PreferenceManager
 import java.io.*
 
 
@@ -19,7 +22,8 @@ class ActivityMain : ActivityThemable() {
      * Storage of private vars. These being _uri (stores uri of opened file); _createFileRequestCode
      * (custom request code); _readRequestCode (request code for reading a file)
      */
-    private var _uri: Uri? = null
+    private var _uri: String? = null
+    private var _languageID = "java"
     private var _createFileRequestCode: Int = 41
     private var _readRequestCode: Int = 42
 
@@ -31,19 +35,38 @@ class ActivityMain : ActivityThemable() {
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
 
+        // Get saved state
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        _languageID = sharedPreferences.getString("lang", "java")!!
+        _uri = sharedPreferences.getString("uri", null)
+        Log.e("FHCODE_0", _languageID)
+        Log.e("FHCODE_0", _uri.toString())
+
+        // Set up correct colour
+        var colours: Colours = ColoursDark()
+        if (currentTheme == 0) {
+            colours = ColoursLight()
+        }
+
+        // Set up correct language
+        var languageRules: LanguageRules = LanguageRulesJava()
+        when (_languageID) {
+            "py" -> languageRules = LanguageRulesPython()
+        }
+
+        // Set up code edit, apply highlighting and some startup text
         val codeEditText: EditText = findViewById(R.id.codeHighlight)
         val textHighlight = TextHighlight(
             codeEditText,
-            LanguageRulesJava(),
-            ColoursDark()
+            languageRules,
+            colours
         )
-
         textHighlight.start()
-        codeEditText.setText("void bar")
+        codeEditText.setText(R.string.blank_file_text)
     }
+
 
     /**
      * Override the onCreateOptionsMenu method (used to create the overflow menu - see three dotted
@@ -70,40 +93,97 @@ class ActivityMain : ActivityThemable() {
         // Handle item selection
         return when (item.itemId) {
             R.id.action_new_file -> {
-                showDialogMessage("To implement")
-                true
+                doNewFile(); true
             }
             R.id.action_open -> {
-                startFileOpen()
-                true
+                startFileOpen(); true
             }
             R.id.action_save -> {
-                doFileSave()
-                true
+                doFileSave(); true
             }
             R.id.action_save_as -> {
-                startFileSaveAs()
-                true
+                startFileSaveAs(); true
             }
             R.id.action_settings -> {
-                startActivity(Intent(this, ActivitySettings::class.java))
-                true
+                startActivity(Intent(this, ActivitySettings::class.java)); true
             }
             R.id.action_about -> {
-                startActivity(Intent(this, ActivityAbout::class.java))
-                true
+                startActivity(Intent(this, ActivityAbout::class.java)); true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
-    private fun showDialogMessage(message: String="Saved!"){
+    /**
+     * Wrap the recreate method to save _languageID and _uri as private vars are wiped on recreate
+     * Note that this introduces a bug that has been remediated in the doFileSave method
+     *
+     */
+    private fun update() {
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
+        editor.putString("lang", _languageID)
+        editor.putString("uri", _uri)
+        editor.apply()
+        recreate()
+    }
+
+    /**
+     * Somewhat unintuitive way to obtain the file extension from a URI as android often uses non
+     * file path URIs
+     *
+     * @param uri
+     * @return String file extension (short) eg. py for a python file
+     */
+    private fun getExtFromURI(uri: Uri?): String {
+        if (uri != null) {
+            return MimeTypeMap.getSingleton().getExtensionFromMimeType(
+                contentResolver.getType(uri)
+            ).toString()
+        }
+        return "java"
+    }
+
+    /**
+     * Show a 'saved' dialog. In a function as its reused a couple of times
+     *
+     */
+    private fun showDialogMessageSave() {
         val alertDialog: AlertDialog = AlertDialog.Builder(this, R.style.DialogTheme).create()
-        alertDialog.setTitle(message)
+        alertDialog.setTitle(getString(R.string.dialog_saved_title))
         alertDialog.setButton(
-            AlertDialog.BUTTON_NEUTRAL, "OK"
-        ) { dialog, which -> dialog.dismiss() }
+            AlertDialog.BUTTON_NEUTRAL, getString(R.string.dialog_saved_button)
+        ) { dialog, which ->
+            dialog.dismiss()
+            update()
+        }
         alertDialog.show()
+    }
+
+    /**
+     * Call this when the user clicks menu -> new file
+     *
+     */
+    private fun doNewFile() {
+        val alertDialog: AlertDialog = AlertDialog.Builder(this, R.style.DialogTheme).create()
+        alertDialog.setTitle(getString(R.string.dialog_new_title))
+        // Cancel/ No - Do nothing
+        alertDialog.setButton(
+            AlertDialog.BUTTON_NEGATIVE, getString(R.string.dialog_new_cancel)
+        ) { dialog, which -> dialog.dismiss(); }
+        // Confirm/ Yes - Overwrite text, reset language id and uri and refresh
+        alertDialog.setButton(
+            AlertDialog.BUTTON_POSITIVE, getString(R.string.dialog_new_confirm)
+        ) { dialog, which ->
+            dialog.dismiss()
+            val codeEditText: EditText = findViewById(R.id.codeHighlight)
+            codeEditText.setText(R.string.blank_file_text)
+            _languageID = "java"
+            _uri = null
+            update()
+        }
+        alertDialog.show()
+
     }
 
 
@@ -113,12 +193,15 @@ class ActivityMain : ActivityThemable() {
      */
     private fun doFileSave() {
         if (_uri != null) {
-            Log.e("FHCODE_0", _uri.toString())
-            writeTextToUri(_uri!!)
-            showDialogMessage()
+            if (writeTextToUri(Uri.parse(_uri!!))) {
+                showDialogMessageSave()
+            } else {
+                // Fix a bug introduced by saving the uri of the last opened file. Attempt to save,
+                // fail with a security error and then save as
+                startFileSaveAs()
+            }
         } else {
-            Log.e("FHCODE_0", "_uri is null!")
-            showDialogMessage("Please save as")
+            startFileSaveAs()
         }
 
     }
@@ -141,10 +224,11 @@ class ActivityMain : ActivityThemable() {
      * @param data Intent - some intent with a uri (accessed with .data)
      */
     private fun completeFileOpen(data: Intent?) {
-        _uri = data!!.data
+        _uri = data!!.data.toString()
+        _languageID = getExtFromURI(Uri.parse(_uri))
         val codeEditText: EditText = findViewById(R.id.codeHighlight)
-        codeEditText.setText(readTextFromUri(_uri!!))
-
+        codeEditText.setText(readTextFromUri(Uri.parse(_uri)))
+        update()
     }
 
     /**
@@ -164,9 +248,10 @@ class ActivityMain : ActivityThemable() {
      * @param data Intent - some intent with a uri (accessed with .data)
      */
     private fun completeFileSaveAs(data: Intent?) {
-        _uri = data!!.data
-        writeTextToUri(_uri!!)
-        showDialogMessage()
+        _uri = data!!.data.toString()
+        _languageID = getExtFromURI(Uri.parse(_uri))
+        writeTextToUri(Uri.parse(_uri))
+        showDialogMessageSave()
     }
 
 
@@ -191,6 +276,8 @@ class ActivityMain : ActivityThemable() {
         } catch (e: FileNotFoundException) {
             e.printStackTrace()
         } catch (e: IOException) {
+            e.printStackTrace()
+        } catch (e: SecurityException) {
             e.printStackTrace()
         }
         return false

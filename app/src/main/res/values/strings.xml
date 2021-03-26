@@ -13,15 +13,33 @@
     <string name="title_activity_about">FHCode - About</string>
     <string name="title_activity_settings">FHCode - Settings</string>
 
+    <!-- main  -->
+    <string name="main_code_edit">Text editor field</string>
 
+
+    <!-- settings  -->
+    <string name="settings_theme">Theme</string>
     <string name="settings_theme_radio1">Light</string>
     <string name="settings_theme_radio2">Dark</string>
     <string name="settings_theme_radio3">Black</string>
     <string name="settings_theme_radio4">System</string>
 
+    <!-- about  -->
+    <string name="about_title">Credits</string>
+    <string name="about_design">Design: Kieran W</string>
+    <string name="about_programming">Programming: Kieran W</string>
+    <string name="about_url">https://github.com/FredHappyface</string>
 
-    <string name="saved">OK</string>
+    <!-- Saved dialog  -->
+    <string name="dialog_saved_button">OK</string>
+    <string name="dialog_saved_title">Saved!</string>
+    <!-- New file dialog  -->
+    <string name="dialog_new_confirm">Yes</string>
+    <string name="dialog_new_cancel">No</string>
+    <string name="dialog_new_title">Create New File?</string>
 
+    <!-- Blank file text  -->
+    <string name="blank_file_text">[This is a blank file, open a file or edit this file and save]</string>
 
 
 </resources>

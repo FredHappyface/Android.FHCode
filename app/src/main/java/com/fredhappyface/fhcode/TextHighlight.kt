@@ -13,7 +13,7 @@ open class TextHighlight(
     targetEditText: EditText,
     languageRules: LanguageRules,
     colours: Colours,
-    timeDelay: Long=150
+    timeDelay: Long = 150
 ) {
 
     private var syntaxHighlighter = SpannableHighlighter(languageRules, colours)
@@ -23,13 +23,13 @@ open class TextHighlight(
             refreshHighlight()
         }
 
-    internal var highlightTask: Job?=null
+    internal var highlightTask: Job? = null
 
     private val delayedTextWatch = DelayedTextWatch(
-            timeDelay,
-            action = {
-                refreshHighlight()
-            })
+        timeDelay,
+        action = {
+            refreshHighlight()
+        })
 
     private val editable: Editable
         get() = targetEditText.text
@@ -51,7 +51,7 @@ open class TextHighlight(
                 syntaxHighlighter.createHighlighting(currentText)
             }
             val original = syntaxHighlighter.appliedStyles
-            val previousStyles = mutableSetOf<CharacterStyle>().apply { addAll(original)}
+            val previousStyles = mutableSetOf<CharacterStyle>().apply { addAll(original) }
             try {
                 syntaxHighlighter.highlight(editable, highlightEntities)
             } catch (e: IndexOutOfBoundsException) {
@@ -98,8 +98,8 @@ open class TextHighlight(
 
 open class DelayedTextWatch(
     private var timeDelay: Long = 150,
-    val action: (CharSequence?) -> Unit)
-    : TextWatcher {
+    val action: (CharSequence?) -> Unit
+) : TextWatcher {
 
     private var timer = Timer()
 
@@ -123,13 +123,18 @@ open class DelayedTextWatch(
 
 
 open class SpannableHighlighter(
-        private val languageRules: LanguageRules,
-        private val colours: Colours)
-    : LanguageRules by languageRules {
+    private val languageRules: LanguageRules,
+    private val colours: Colours
+) : LanguageRules by languageRules {
 
     open val appliedStyles = mutableSetOf<CharacterStyle>()
 
-    open fun applyStyle(characterStyle: CharacterStyle, spannable: Spannable, start: Int, end: Int) {
+    open fun applyStyle(
+        characterStyle: CharacterStyle,
+        spannable: Spannable,
+        start: Int,
+        end: Int
+    ) {
         spannable.setSpan(characterStyle, start, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         appliedStyles.add(characterStyle)
 

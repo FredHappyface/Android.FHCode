@@ -7,9 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 
 
-open class ActivityThemable: AppCompatActivity() {
+open class ActivityThemable : AppCompatActivity() {
     open lateinit var sharedPreferences: SharedPreferences
-    private var currentTheme = 0
+    internal var currentTheme = 0
 
     /**
      * Triggered when the activity is created, sets the title to BlackC4t with a color of #ABB2BF. Sets the theme to one

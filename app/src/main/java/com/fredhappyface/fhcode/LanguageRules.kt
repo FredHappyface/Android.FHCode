@@ -12,6 +12,6 @@ interface LanguageRules {
 
     fun createHighlighting(string: CharSequence): List<RuleMatch> {
         return matchKeywords(string) + matchAnnotations(string) + matchClasses(string) +
-                matchConstants(string)+ matchComments(string)+ matchImports(string)
+                matchConstants(string) + matchComments(string) + matchImports(string)
     }
 }

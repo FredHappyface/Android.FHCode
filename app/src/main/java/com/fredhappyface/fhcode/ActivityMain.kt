@@ -2,17 +2,14 @@ package com.fredhappyface.fhcode
 
 import android.app.Activity
 import android.content.Intent
-import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.webkit.MimeTypeMap
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
-import androidx.preference.PreferenceManager
 import java.io.*
 
 
@@ -38,11 +35,8 @@ class ActivityMain : ActivityThemable() {
         setContentView(R.layout.activity_main)
 
         // Get saved state
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        _languageID = sharedPreferences.getString("lang", "java")!!
-        _uri = sharedPreferences.getString("uri", null)
-        Log.e("FHCODE_0", _languageID)
-        Log.e("FHCODE_0", _uri.toString())
+        _uri = savedInstanceState?.getString("_uri", null)
+        _languageID = savedInstanceState?.getString("_languageID", "java").toString()
 
         // Set up correct colour
         var colours: Colours = ColoursDark()
@@ -115,18 +109,16 @@ class ActivityMain : ActivityThemable() {
     }
 
     /**
-     * Wrap the recreate method to save _languageID and _uri as private vars are wiped on recreate
-     * Note that this introduces a bug that has been remediated in the doFileSave method
+     * Override onSaveInstanceState to save the _languageID and _uri when recreating the activity
      *
+     * @param outState: Bundle
      */
-    private fun update() {
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        val editor: SharedPreferences.Editor = sharedPreferences.edit()
-        editor.putString("lang", _languageID)
-        editor.putString("uri", _uri)
-        editor.apply()
-        recreate()
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("_languageID", _languageID)
+        outState.putString("_uri", _uri)
     }
+
 
     /**
      * Somewhat unintuitive way to obtain the file extension from a URI as android often uses non
@@ -155,7 +147,7 @@ class ActivityMain : ActivityThemable() {
             AlertDialog.BUTTON_NEUTRAL, getString(R.string.dialog_saved_button)
         ) { dialog, which ->
             dialog.dismiss()
-            update()
+            recreate()
         }
         alertDialog.show()
     }
@@ -180,10 +172,9 @@ class ActivityMain : ActivityThemable() {
             codeEditText.setText(R.string.blank_file_text)
             _languageID = "java"
             _uri = null
-            update()
+            recreate()
         }
         alertDialog.show()
-
     }
 
 
@@ -193,17 +184,11 @@ class ActivityMain : ActivityThemable() {
      */
     private fun doFileSave() {
         if (_uri != null) {
-            if (writeTextToUri(Uri.parse(_uri!!))) {
-                showDialogMessageSave()
-            } else {
-                // Fix a bug introduced by saving the uri of the last opened file. Attempt to save,
-                // fail with a security error and then save as
-                startFileSaveAs()
-            }
+            writeTextToUri(Uri.parse(_uri!!))
+            showDialogMessageSave()
         } else {
             startFileSaveAs()
         }
-
     }
 
 
@@ -228,7 +213,7 @@ class ActivityMain : ActivityThemable() {
         _languageID = getExtFromURI(Uri.parse(_uri))
         val codeEditText: EditText = findViewById(R.id.codeHighlight)
         codeEditText.setText(readTextFromUri(Uri.parse(_uri)))
-        update()
+        recreate()
     }
 
     /**

@@ -3,11 +3,6 @@
 
 Code editor for android
 
-## Notes
-
-Some helpful code/ resources are at...
-https://github.com/markusressel/KodeEditor
-
 
 ## Language Information
 

@@ -10,6 +10,7 @@ import android.view.MenuItem
 import android.webkit.MimeTypeMap
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
+import androidx.preference.PreferenceManager
 import java.io.*
 
 
@@ -19,6 +20,7 @@ class ActivityMain : ActivityThemable() {
      * Storage of private vars. These being _uri (stores uri of opened file); _createFileRequestCode
      * (custom request code); _readRequestCode (request code for reading a file)
      */
+    private var currentTextSize = 0
     private var _uri: String? = null
     private var _languageID = "java"
     private var _createFileRequestCode: Int = 41
@@ -59,6 +61,24 @@ class ActivityMain : ActivityThemable() {
         )
         textHighlight.start()
         codeEditText.setText(R.string.blank_file_text)
+
+        // Apply text size
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+        currentTextSize = sharedPreferences.getInt("text", 18)
+        codeEditText.textSize = currentTextSize.toFloat()
+    }
+
+    /**
+     * Triggered when an activity is resumed. If the text size differs from the current text size,
+     * then the activity is recreated
+     */
+    override fun onResume() {
+        super.onResume()
+        val textSize = sharedPreferences.getInt("text", 18)
+        if (currentTextSize != textSize) {
+            currentTextSize = textSize
+            recreate()
+        }
     }
 
 

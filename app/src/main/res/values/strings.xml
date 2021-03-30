@@ -23,6 +23,8 @@
     <string name="settings_theme_radio2">Dark</string>
     <string name="settings_theme_radio3">Black</string>
     <string name="settings_theme_radio4">System</string>
+    <string name="settings_text_size">Text Size</string>
+
 
     <!-- about  -->
     <string name="about_title">Credits</string>

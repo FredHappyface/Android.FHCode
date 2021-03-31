@@ -50,6 +50,7 @@ class ActivityMain : ActivityThemable() {
         var languageRules: LanguageRules = LanguageRulesJava()
         when (_languageID) {
             "py" -> languageRules = LanguageRulesPython()
+            "xml" -> languageRules = LanguageRulesXML()
         }
 
         // Set up code edit, apply highlighting and some startup text
@@ -149,6 +150,13 @@ class ActivityMain : ActivityThemable() {
      */
     private fun getExtFromURI(uri: Uri?): String {
         if (uri != null) {
+            val cursor = contentResolver.query(uri, null, null, null, null);
+            if (cursor != null) {
+                cursor.moveToFirst()
+                val ext = cursor.getString(2) // Get the file name
+                cursor.close()
+                return ext.split(".").last()
+            }
             return MimeTypeMap.getSingleton().getExtensionFromMimeType(
                 contentResolver.getType(uri)
             ).toString()

@@ -1,7 +1,6 @@
 package com.fredhappyface.fhcode
 
 import android.content.SharedPreferences.Editor
-import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.LinearLayout
@@ -27,10 +26,9 @@ class ActivitySettings : ActivityThemable() {
         val themeChoices = findViewById<LinearLayout>(R.id.theme)
         val currentTheme = sharedPreferences.getInt("theme", 3)
         val cardView = themeChoices.getChildAt(currentTheme) as MaterialCardView
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            cardView.strokeWidth = (3 * applicationContext.resources.displayMetrics.density).toInt()
-            cardView.strokeColor = resources.getColor(R.color.magenta, theme)
-        }
+        cardView.strokeWidth = (3 * applicationContext.resources.displayMetrics.density).toInt()
+        cardView.strokeColor = resources.getColor(R.color.magenta, theme)
+
 
         // Text save
         val textSlider = findViewById<Slider>(R.id.slider)

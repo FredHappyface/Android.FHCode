@@ -4,7 +4,7 @@
     <color name="magenta_light">#FFBB61E0</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+    <color name="transparent">#00000000</color>
     <color name="darkGrey">#181A1F</color>
     <color name="grey">#282C34</color>
     <color name="lightGrey">#EAEAEB</color>

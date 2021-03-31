@@ -20,15 +20,16 @@
         <item name="android:windowBackground">?attr/backgroundColorPrimary</item>
         <item name="android:fontFamily">@font/firacode_medium</item>
 
-        <item name="android:popupBackground">?attr/backgroundColorSecondary</item>
         <item name="popupMenuBackground">?attr/backgroundColorSecondary</item>
 
         <item name="android:dialogTheme">@style/DialogTheme</item>
         <item name="actionBarStyle">@style/AppBarBackground</item>
         <item name="actionBarTheme">@style/AppBarText</item>
+        <item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+    </style>
 
-
-
+    <style name="OverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:tint">@color/white</item>
     </style>
 
     <style name="DialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
@@ -46,6 +47,7 @@
     <style name="AppBarBackground" parent="Widget.MaterialComponents.ActionBar.Solid">
         <item name="android:background">?attr/appBarColor</item>
     </style>
+
 
     <style name="AppBarText" parent="ThemeOverlay.MaterialComponents.ActionBar.Surface" >
         <item name="android:textColorPrimary">@color/white</item>

@@ -13,7 +13,7 @@
         style="@style/body_text_style"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="?attr/backgroundColorPrimary"
+        android:background="@color/transparent"
         android:ems="10"
         android:inputType=""
         android:text=""

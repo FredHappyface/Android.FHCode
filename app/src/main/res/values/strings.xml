@@ -13,10 +13,6 @@
     <string name="title_activity_about">FHCode - About</string>
     <string name="title_activity_settings">FHCode - Settings</string>
 
-    <!-- main  -->
-    <string name="main_code_edit">Text editor field</string>
-
-
     <!-- settings  -->
     <string name="settings_theme">Theme</string>
     <string name="settings_theme_radio1">Light</string>

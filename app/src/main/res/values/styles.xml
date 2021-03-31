@@ -106,10 +106,4 @@
         <item name="android:fontFamily">@font/firacode</item>
 
     </style>
-
-
-    <style name="radio_style" parent="body_text_style">
-        <item name="android:buttonTint">?attr/foregroundColorAccent</item>
-    </style>
-
 </resources>

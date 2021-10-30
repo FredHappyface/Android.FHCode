@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?><!--suppress ALL -->
 <resources>
-    <!-- Background Colours -->
-    <attr name="backgroundColorPrimary" format="reference"></attr>
-    <attr name="backgroundColorSecondary" format="reference"></attr>
-    <!-- Foreground Colours -->
-    <attr name="foregroundColorPrimary" format="reference"></attr>
-    <attr name="foregroundColorSecondary" format="reference"></attr>
-    <attr name="foregroundColorAccent" format="reference"></attr>
-    <!-- Appbar Colours -->
-    <attr name="appBarColor" format="reference"></attr>
-    <attr name="appBarTextColor" format="reference"></attr>
-    <attr name="navigationBarColor" format="reference"></attr>
+	<!-- Background Colours -->
+	<attr name="backgroundColorPrimary" format="reference"></attr>
+	<attr name="backgroundColorSecondary" format="reference"></attr>
+	<!-- Foreground Colours -->
+	<attr name="foregroundColorPrimary" format="reference"></attr>
+	<attr name="foregroundColorSecondary" format="reference"></attr>
+	<attr name="foregroundColorAccent" format="reference"></attr>
+	<!-- Appbar Colours -->
+	<attr name="appBarColor" format="reference"></attr>
+	<attr name="appBarTextColor" format="reference"></attr>
+	<attr name="navigationBarColor" format="reference"></attr>
 </resources>

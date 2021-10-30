@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/action_new_file"
-        android:orderInCategory="100"
-        android:title="@string/action_new_file" />
-    <item
-        android:id="@+id/action_open"
-        android:orderInCategory="100"
-        android:title="@string/action_open" />
-    <item
-        android:id="@+id/action_save"
-        android:orderInCategory="100"
-        android:title="@string/action_save" />
-    <item
-        android:id="@+id/action_save_as"
-        android:orderInCategory="100"
-        android:title="@string/action_save_as" />
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings" />
-    <item
-        android:id="@+id/action_about"
-        android:orderInCategory="100"
-        android:title="@string/action_about" />
+	<item
+		android:id="@+id/action_new_file"
+		android:orderInCategory="100"
+		android:title="@string/action_new_file" />
+	<item
+		android:id="@+id/action_open"
+		android:orderInCategory="100"
+		android:title="@string/action_open" />
+	<item
+		android:id="@+id/action_save"
+		android:orderInCategory="100"
+		android:title="@string/action_save" />
+	<item
+		android:id="@+id/action_save_as"
+		android:orderInCategory="100"
+		android:title="@string/action_save_as" />
+	<item
+		android:id="@+id/action_settings"
+		android:orderInCategory="100"
+		android:title="@string/action_settings" />
+	<item
+		android:id="@+id/action_about"
+		android:orderInCategory="100"
+		android:title="@string/action_about" />
 </menu>

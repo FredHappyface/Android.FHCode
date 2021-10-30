@@ -1,4 +1,5 @@
 package com.fredhappyface.fhcode
+
 /**
  * Rule match representation
  *
@@ -7,7 +8,7 @@ package com.fredhappyface.fhcode
  * @property endIndex end char index
  */
 data class RuleMatch(
-    val ruleName: String,
-    val startIndex: Int,
-    val endIndex: Int
+	val ruleName: String,
+	val startIndex: Int,
+	val endIndex: Int
 )

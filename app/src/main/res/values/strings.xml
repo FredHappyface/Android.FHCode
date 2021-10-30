@@ -1,34 +1,34 @@
 <resources>
-    <string name="app_name">FHCode</string>
-    <!-- Strings for menu_main.xml -->
-    <string name="action_new_file">New File</string>
-    <string name="action_open">Open</string>
-    <string name="action_save">Save</string>
-    <string name="action_save_as">Save As</string>
-    <string name="action_about">About</string>
-    <string name="action_settings">Settings</string>
-    <!-- Strings for about + settings activities  -->
-    <string name="title_activity_about">FHCode - About</string>
-    <string name="title_activity_settings">FHCode - Settings</string>
-    <!-- settings  -->
-    <string name="settings_theme">Theme</string>
-    <string name="settings_theme_radio1">Light</string>
-    <string name="settings_theme_radio2">Dark</string>
-    <string name="settings_theme_radio3">Black</string>
-    <string name="settings_theme_radio4">System</string>
-    <string name="settings_text_size">Text Size</string>
-    <!-- about  -->
-    <string name="about_title">Credits</string>
-    <string name="about_design">Design: Kieran W</string>
-    <string name="about_programming">Programming: Kieran W</string>
-    <string name="about_url">https://github.com/FredHappyface</string>
-    <!-- Saved dialog  -->
-    <string name="dialog_saved_button">OK</string>
-    <string name="dialog_saved_title">Saved!</string>
-    <!-- New file dialog  -->
-    <string name="dialog_new_confirm">Yes</string>
-    <string name="dialog_new_cancel">No</string>
-    <string name="dialog_new_title">Create New File?</string>
-    <!-- Blank file text  -->
-    <string name="blank_file_text">[This is a blank file, open a file or edit this file and save]</string>
+	<string name="app_name">FHCode</string>
+	<!-- Strings for menu_main.xml -->
+	<string name="action_new_file">New File</string>
+	<string name="action_open">Open</string>
+	<string name="action_save">Save</string>
+	<string name="action_save_as">Save As</string>
+	<string name="action_about">About</string>
+	<string name="action_settings">Settings</string>
+	<!-- Strings for about + settings activities  -->
+	<string name="title_activity_about">FHCode - About</string>
+	<string name="title_activity_settings">FHCode - Settings</string>
+	<!-- settings  -->
+	<string name="settings_theme">Theme</string>
+	<string name="settings_theme_radio1">Light</string>
+	<string name="settings_theme_radio2">Dark</string>
+	<string name="settings_theme_radio3">Black</string>
+	<string name="settings_theme_radio4">System</string>
+	<string name="settings_text_size">Text Size</string>
+	<!-- about  -->
+	<string name="about_title">Credits</string>
+	<string name="about_design">Design: Kieran W</string>
+	<string name="about_programming">Programming: Kieran W</string>
+	<string name="about_url">https://github.com/FredHappyface</string>
+	<!-- Saved dialog  -->
+	<string name="dialog_saved_button">OK</string>
+	<string name="dialog_saved_title">Saved!</string>
+	<!-- New file dialog  -->
+	<string name="dialog_new_confirm">Yes</string>
+	<string name="dialog_new_cancel">No</string>
+	<string name="dialog_new_title">Create New File?</string>
+	<!-- Blank file text  -->
+	<string name="blank_file_text">[This is a blank file, open a file or edit this file and save]</string>
 </resources>

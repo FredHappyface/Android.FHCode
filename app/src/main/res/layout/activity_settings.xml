@@ -1,105 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    android:theme="@style/AppTheme"
-    tools:context=".ActivitySettings">
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true"
+	android:theme="@style/AppTheme"
+	tools:context=".ActivitySettings">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
 
-        <TextView
-            style="@style/heading_text_style"
-            android:text="@string/settings_theme" />
+		<TextView
+			style="@style/heading_text_style"
+			android:text="@string/settings_theme" />
 
-        <LinearLayout
-            android:id="@+id/theme"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+		<LinearLayout
+			android:id="@+id/theme"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView style="@style/image_container_style">
+			<com.google.android.material.card.MaterialCardView style="@style/image_container_style">
 
-                <ImageView
-                    android:id="@+id/radioLight"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:clickable="true"
-                    android:contentDescription="@string/settings_theme_radio1"
-                    android:cropToPadding="false"
-                    android:focusable="true"
-                    android:onClick="changeTheme"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/light" />
-            </com.google.android.material.card.MaterialCardView>
+				<ImageView
+					android:id="@+id/radioLight"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:adjustViewBounds="true"
+					android:clickable="true"
+					android:contentDescription="@string/settings_theme_radio1"
+					android:cropToPadding="false"
+					android:focusable="true"
+					android:onClick="changeTheme"
+					android:scaleType="fitStart"
+					app:srcCompat="@drawable/light" />
+			</com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView style="@style/image_container_style">
+			<com.google.android.material.card.MaterialCardView style="@style/image_container_style">
 
-                <ImageView
-                    android:id="@+id/radioDark"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:clickable="true"
-                    android:contentDescription="@string/settings_theme_radio2"
-                    android:cropToPadding="false"
-                    android:focusable="true"
-                    android:onClick="changeTheme"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/dark" />
-            </com.google.android.material.card.MaterialCardView>
+				<ImageView
+					android:id="@+id/radioDark"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:adjustViewBounds="true"
+					android:clickable="true"
+					android:contentDescription="@string/settings_theme_radio2"
+					android:cropToPadding="false"
+					android:focusable="true"
+					android:onClick="changeTheme"
+					android:scaleType="fitStart"
+					app:srcCompat="@drawable/dark" />
+			</com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView style="@style/image_container_style">
+			<com.google.android.material.card.MaterialCardView style="@style/image_container_style">
 
-                <ImageView
-                    android:id="@+id/radioBlack"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:clickable="true"
-                    android:contentDescription="@string/settings_theme_radio3"
-                    android:cropToPadding="false"
-                    android:focusable="true"
-                    android:onClick="changeTheme"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/black" />
-            </com.google.android.material.card.MaterialCardView>
+				<ImageView
+					android:id="@+id/radioBlack"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:adjustViewBounds="true"
+					android:clickable="true"
+					android:contentDescription="@string/settings_theme_radio3"
+					android:cropToPadding="false"
+					android:focusable="true"
+					android:onClick="changeTheme"
+					android:scaleType="fitStart"
+					app:srcCompat="@drawable/black" />
+			</com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.card.MaterialCardView style="@style/image_container_style">
+			<com.google.android.material.card.MaterialCardView style="@style/image_container_style">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:clickable="true"
-                    android:contentDescription="@string/settings_theme_radio4"
-                    android:cropToPadding="false"
-                    android:focusable="true"
-                    android:onClick="changeTheme"
-                    android:scaleType="fitStart"
-                    app:srcCompat="@drawable/system" />
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
+				<ImageView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:adjustViewBounds="true"
+					android:clickable="true"
+					android:contentDescription="@string/settings_theme_radio4"
+					android:cropToPadding="false"
+					android:focusable="true"
+					android:onClick="changeTheme"
+					android:scaleType="fitStart"
+					app:srcCompat="@drawable/system" />
+			</com.google.android.material.card.MaterialCardView>
+		</LinearLayout>
 
-        <TextView
-            style="@style/heading_text_style"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/settings_text_size" />
+		<TextView
+			style="@style/heading_text_style"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/settings_text_size" />
 
-        <com.google.android.material.slider.Slider
-            android:id="@+id/slider"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:stepSize="1"
-            android:value="18"
-            android:valueFrom="10"
-            android:valueTo="50" />
-    </LinearLayout>
+		<com.google.android.material.slider.Slider
+			android:id="@+id/slider"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:stepSize="1"
+			android:value="18"
+			android:valueFrom="10"
+			android:valueTo="50" />
+	</LinearLayout>
 </ScrollView>

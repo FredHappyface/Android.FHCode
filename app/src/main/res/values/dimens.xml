@@ -1,7 +1,7 @@
 <resources>
-    <dimen name="text_size_h1">24dp</dimen>
-    <dimen name="text_size_h2">20dp</dimen>
-    <dimen name="text_size_body">18dp</dimen>
-    <dimen name="text_content_margin">12dp</dimen>
-    <dimen name="text_content_margin_vertical">6dp</dimen>
+	<dimen name="text_size_h1">24dp</dimen>
+	<dimen name="text_size_h2">20dp</dimen>
+	<dimen name="text_size_body">18dp</dimen>
+	<dimen name="text_content_margin">12dp</dimen>
+	<dimen name="text_content_margin_vertical">6dp</dimen>
 </resources>

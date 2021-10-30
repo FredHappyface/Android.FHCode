@@ -46,7 +46,7 @@ class ActivitySettings : ActivityThemable() {
 	 * @param view
 	 */
 	fun changeTheme(view: View) {
-		val editor: Editor = sharedPreferences.edit()
+		val editor: Editor = mSharedPreferences.edit()
 		editor.putInt(
 			"theme", when (view.id) {
 				R.id.radioLight -> 0

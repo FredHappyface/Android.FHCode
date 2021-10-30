@@ -41,7 +41,7 @@ class ActivityMain : ActivityThemable() {
 		mLanguageID = savedInstanceState?.getString("_languageID", "java").toString()
 		// Set up correct colour
 		var colours: Colours = ColoursDark()
-		if (currentTheme == 0) {
+		if (mCurrentTheme == 0) {
 			colours = ColoursLight()
 		}
 		// Set up correct language
@@ -60,8 +60,8 @@ class ActivityMain : ActivityThemable() {
 		textHighlight.start()
 		codeEditText.setText(R.string.blank_file_text)
 		// Apply text size
-		sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-		mCurrentTextSize = sharedPreferences.getInt("text", 18)
+		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+		mCurrentTextSize = mSharedPreferences.getInt("text", 18)
 		codeEditText.textSize = mCurrentTextSize.toFloat()
 	}
 
@@ -71,7 +71,7 @@ class ActivityMain : ActivityThemable() {
 	 */
 	override fun onResume() {
 		super.onResume()
-		val textSize = sharedPreferences.getInt("text", 18)
+		val textSize = mSharedPreferences.getInt("text", 18)
 		if (mCurrentTextSize != textSize) {
 			mCurrentTextSize = textSize
 			recreate()

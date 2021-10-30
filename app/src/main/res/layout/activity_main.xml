@@ -6,21 +6,20 @@
     android:layout_height="match_parent"
     android:theme="@style/AppTheme"
     tools:context=".ActivityMain">
-
     <EditText
         android:id="@+id/codeHighlight"
-        android:gravity="top|start"
         style="@style/body_text_style"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/transparent"
         android:ems="10"
+        android:gravity="top|start"
+        android:importantForAutofill="no"
         android:inputType=""
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no"
         tools:ignore="LabelFor" />
 </androidx.constraintlayout.widget.ConstraintLayout>

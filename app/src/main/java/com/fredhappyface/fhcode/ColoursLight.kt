@@ -1,10 +1,10 @@
 package com.fredhappyface.fhcode
-
 import android.graphics.Color
 import android.text.style.ForegroundColorSpan
-
+/**
+ * ColoursLight implements interface Colours
+ */
 class ColoursLight : Colours {
-
     override fun getColour(type: String): ForegroundColorSpan {
         val colourMap = mapOf(
             "keyword" to "#9E25A6",

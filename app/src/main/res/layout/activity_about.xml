@@ -6,35 +6,26 @@
     android:fitsSystemWindows="true"
     android:theme="@style/AppTheme"
     tools:context=".ActivityAbout">
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
             <TextView
                 style="@style/heading_text_style"
                 android:text="@string/about_title" />
-
             <TextView
                 style="@style/body_text_style"
                 android:text="@string/about_design" />
-
             <TextView
                 style="@style/body_text_style"
                 android:text="@string/about_programming" />
-
             <TextView
                 style="@style/body_text_style"
                 android:autoLink="web"
                 android:text="@string/about_url" />
-
-
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

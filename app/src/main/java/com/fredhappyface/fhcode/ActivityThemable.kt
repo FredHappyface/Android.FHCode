@@ -1,19 +1,18 @@
 package com.fredhappyface.fhcode
-
 import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
-
-
+/**
+ * ActivityThemable class inherits from the AppCompatActivity class - AppCompatActivity with custom
+ * themes. Overrides onCreate and onResume to set the theme
+ */
 open class ActivityThemable : AppCompatActivity() {
-    open lateinit var sharedPreferences: SharedPreferences
+    internal lateinit var sharedPreferences: SharedPreferences
     internal var currentTheme = 0
-
     /**
-     * Triggered when the activity is created, sets the title to BlackC4t with a color of #ABB2BF. Sets the theme to one
-     * that the user selected
+     * Triggered when the activity is created. Sets the theme to one that the user selected
      * @param savedInstanceState activity saved data
      */
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +29,6 @@ open class ActivityThemable : AppCompatActivity() {
             }
         }
     }
-
     /**
      * Triggered when an activity is resumed. If the theme differs from the currently active theme,
      * then the activity is recreated

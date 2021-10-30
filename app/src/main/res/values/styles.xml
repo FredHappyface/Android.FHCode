@@ -19,19 +19,15 @@
         <item name="android:textColor">?attr/foregroundColorPrimary</item>
         <item name="android:windowBackground">?attr/backgroundColorPrimary</item>
         <item name="android:fontFamily">@font/firacode_medium</item>
-
         <item name="popupMenuBackground">?attr/backgroundColorSecondary</item>
-
         <item name="android:dialogTheme">@style/DialogTheme</item>
         <item name="actionBarStyle">@style/AppBarBackground</item>
         <item name="actionBarTheme">@style/AppBarText</item>
         <item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
     </style>
-
     <style name="OverflowButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
         <item name="android:tint">@color/white</item>
     </style>
-
     <style name="DialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">
         <item name="android:textColorPrimary">?attr/foregroundColorPrimary</item>
         <item name="android:textColorSecondary">?attr/foregroundColorSecondary</item>
@@ -40,51 +36,35 @@
         <item name="colorAccent">?attr/foregroundColorAccent</item>
         <!-- Set the button colour -->
         <item name="colorPrimary">?attr/foregroundColorAccent</item>
-
     </style>
-
-
     <style name="AppBarBackground" parent="Widget.MaterialComponents.ActionBar.Solid">
         <item name="android:background">?attr/appBarColor</item>
     </style>
-
-
-    <style name="AppBarText" parent="ThemeOverlay.MaterialComponents.ActionBar.Surface" >
+    <style name="AppBarText" parent="ThemeOverlay.MaterialComponents.ActionBar.Surface">
         <item name="android:textColorPrimary">@color/white</item>
     </style>
-
-
     <style name="LightTheme" parent="AppTheme">
         <item name="backgroundColorPrimary">@color/white</item>
         <item name="backgroundColorSecondary">@color/lightGrey</item>
-
         <item name="foregroundColorAccent">@color/magenta</item>
         <item name="foregroundColorPrimary">@color/black</item>
         <item name="foregroundColorSecondary">@color/grey</item>
-
     </style>
-
     <style name="DarkTheme" parent="AppTheme">
         <item name="backgroundColorPrimary">@color/darkGrey</item>
         <item name="backgroundColorSecondary">@color/grey</item>
-
         <item name="foregroundColorAccent">@color/magenta</item>
         <item name="foregroundColorPrimary">@color/white</item>
         <item name="foregroundColorSecondary">@color/lightGrey</item>
     </style>
-
     <style name="BlackTheme" parent="AppTheme">
         <item name="backgroundColorPrimary">@color/black</item>
         <item name="backgroundColorSecondary">@color/black</item>
-
         <item name="foregroundColorAccent">@color/magenta</item>
         <item name="foregroundColorPrimary">@color/white</item>
         <item name="foregroundColorSecondary">@color/white</item>
-
         <item name="appBarColor">@color/black</item>
     </style>
-
-
     <style name="base_container_style">
         <item name="android:layout_marginLeft">@dimen/text_content_margin</item>
         <item name="android:layout_marginRight">@dimen/text_content_margin</item>
@@ -93,7 +73,6 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-
     <style name="image_container_style" parent="Widget.MaterialComponents.CardView">
         <item name="android:layout_marginLeft">@dimen/text_content_margin</item>
         <item name="android:layout_marginRight">@dimen/text_content_margin</item>
@@ -105,19 +84,15 @@
         <item name="cardElevation">0dp</item>
         <item name="cardCornerRadius">8dp</item>
     </style>
-
     <style name="heading_text_style" parent="base_container_style">
         <item name="android:textColor">?attr/foregroundColorPrimary</item>
         <item name="android:textSize">@dimen/text_size_h1</item>
     </style>
-
     <style name="heading2_text_style" parent="heading_text_style">
         <item name="android:textSize">@dimen/text_size_h2</item>
     </style>
-
     <style name="body_text_style" parent="heading2_text_style">
         <item name="android:textSize">@dimen/text_size_body</item>
         <item name="android:fontFamily">@font/firacode</item>
-
     </style>
 </resources>

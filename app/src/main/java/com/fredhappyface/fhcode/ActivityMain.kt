@@ -1,5 +1,4 @@
 package com.fredhappyface.fhcode
-
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -9,23 +8,21 @@ import android.view.MenuInflater
 import android.view.MenuItem
 import android.webkit.MimeTypeMap
 import android.widget.EditText
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.PreferenceManager
 import java.io.*
-
-
+/**
+ * ActivityMain class inherits from the ActivityThemable class - provides the settings view
+ */
 class ActivityMain : ActivityThemable() {
-
     /**
      * Storage of private vars. These being _uri (stores uri of opened file); _createFileRequestCode
      * (custom request code); _readRequestCode (request code for reading a file)
      */
-    private var currentTextSize = 0
-    private var _uri: String? = null
-    private var _languageID = "java"
-    private var _createFileRequestCode: Int = 41
-    private var _readRequestCode: Int = 42
-
+    private var mCurrentTextSize = 0
+    private var mUri: String? = null
+    private var mLanguageID = "java"
     /**
      * Override the onCreate method from ActivityThemable adding the activity_main view and configuring
      * the codeEditText, the textHighlight and the initial text
@@ -35,24 +32,20 @@ class ActivityMain : ActivityThemable() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         // Get saved state
-        _uri = savedInstanceState?.getString("_uri", null)
-        _languageID = savedInstanceState?.getString("_languageID", "java").toString()
-
+        mUri = savedInstanceState?.getString("_uri", null)
+        mLanguageID = savedInstanceState?.getString("_languageID", "java").toString()
         // Set up correct colour
         var colours: Colours = ColoursDark()
         if (currentTheme == 0) {
             colours = ColoursLight()
         }
-
         // Set up correct language
         var languageRules: LanguageRules = LanguageRulesJava()
-        when (_languageID) {
+        when (mLanguageID) {
             "py" -> languageRules = LanguageRulesPython()
             "xml" -> languageRules = LanguageRulesXML()
         }
-
         // Set up code edit, apply highlighting and some startup text
         val codeEditText: EditText = findViewById(R.id.codeHighlight)
         val textHighlight = TextHighlight(
@@ -62,13 +55,11 @@ class ActivityMain : ActivityThemable() {
         )
         textHighlight.start()
         codeEditText.setText(R.string.blank_file_text)
-
         // Apply text size
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        currentTextSize = sharedPreferences.getInt("text", 18)
-        codeEditText.textSize = currentTextSize.toFloat()
+        mCurrentTextSize = sharedPreferences.getInt("text", 18)
+        codeEditText.textSize = mCurrentTextSize.toFloat()
     }
-
     /**
      * Triggered when an activity is resumed. If the text size differs from the current text size,
      * then the activity is recreated
@@ -76,13 +67,11 @@ class ActivityMain : ActivityThemable() {
     override fun onResume() {
         super.onResume()
         val textSize = sharedPreferences.getInt("text", 18)
-        if (currentTextSize != textSize) {
-            currentTextSize = textSize
+        if (mCurrentTextSize != textSize) {
+            mCurrentTextSize = textSize
             recreate()
         }
     }
-
-
     /**
      * Override the onCreateOptionsMenu method (used to create the overflow menu - see three dotted
      * menu on the title bar)
@@ -95,7 +84,6 @@ class ActivityMain : ActivityThemable() {
         inflater.inflate(R.menu.main_menu, menu)
         return true
     }
-
     /**
      * Override the onOptionsItemSelected method. This is essentially a callback method triggered when
      * the end user selects a menu item. Here we filter the item/ action selection and trigger a
@@ -128,7 +116,6 @@ class ActivityMain : ActivityThemable() {
             else -> super.onOptionsItemSelected(item)
         }
     }
-
     /**
      * Override onSaveInstanceState to save the _languageID and _uri when recreating the activity
      *
@@ -136,11 +123,9 @@ class ActivityMain : ActivityThemable() {
      */
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString("_languageID", _languageID)
-        outState.putString("_uri", _uri)
+        outState.putString("_languageID", mLanguageID)
+        outState.putString("_uri", mUri)
     }
-
-
     /**
      * Somewhat unintuitive way to obtain the file extension from a URI as android often uses non
      * file path URIs
@@ -163,7 +148,6 @@ class ActivityMain : ActivityThemable() {
         }
         return "java"
     }
-
     /**
      * Show a 'saved' dialog. In a function as its reused a couple of times
      *
@@ -173,13 +157,12 @@ class ActivityMain : ActivityThemable() {
         alertDialog.setTitle(getString(R.string.dialog_saved_title))
         alertDialog.setButton(
             AlertDialog.BUTTON_NEUTRAL, getString(R.string.dialog_saved_button)
-        ) { dialog, which ->
+        ) { dialog, _ ->
             dialog.dismiss()
             recreate()
         }
         alertDialog.show()
     }
-
     /**
      * Call this when the user clicks menu -> new file
      *
@@ -190,84 +173,77 @@ class ActivityMain : ActivityThemable() {
         // Cancel/ No - Do nothing
         alertDialog.setButton(
             AlertDialog.BUTTON_NEGATIVE, getString(R.string.dialog_new_cancel)
-        ) { dialog, which -> dialog.dismiss(); }
+        ) { dialog, _ -> dialog.dismiss(); }
         // Confirm/ Yes - Overwrite text, reset language id and uri and refresh
         alertDialog.setButton(
             AlertDialog.BUTTON_POSITIVE, getString(R.string.dialog_new_confirm)
-        ) { dialog, which ->
+        ) { dialog, _ ->
             dialog.dismiss()
             val codeEditText: EditText = findViewById(R.id.codeHighlight)
             codeEditText.setText(R.string.blank_file_text)
-            _languageID = "java"
-            _uri = null
+            mLanguageID = "java"
+            mUri = null
             recreate()
         }
         alertDialog.show()
     }
-
-
     /**
      * Call this when the user clicks menu -> save
      *
      */
     private fun doFileSave() {
-        if (_uri != null) {
-            writeTextToUri(Uri.parse(_uri!!))
+        if (mUri != null) {
+            writeTextToUri(Uri.parse(mUri ?: return))
             showDialogMessageSave()
         } else {
             startFileSaveAs()
         }
     }
-
-
+    /**
+     * Handles ACTION_OPEN_DOCUMENT result and sets mUri, mLanguageID and codeEditText
+     */
+    private val completeFileOpen =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                mUri = result.data?.data.toString()
+                mLanguageID = getExtFromURI(Uri.parse(mUri))
+                val codeEditText: EditText = findViewById(R.id.codeHighlight)
+                codeEditText.setText(readTextFromUri(Uri.parse(mUri)))
+                recreate()
+            }
+        }
     /**
      * Call this when the user clicks menu -> open
      *
      */
     private fun startFileOpen() {
-        intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
         intent.type = "*/*"
-        startActivityForResult(intent, _readRequestCode)
+        completeFileOpen.launch(intent)
     }
-
     /**
-     * Callback from onActivityResult
-     *
-     * @param data Intent - some intent with a uri (accessed with .data)
+     * Handles ACTION_CREATE_DOCUMENT result and sets mUri, mLanguageID and triggers writeTextToUri
      */
-    private fun completeFileOpen(data: Intent?) {
-        _uri = data!!.data.toString()
-        _languageID = getExtFromURI(Uri.parse(_uri))
-        val codeEditText: EditText = findViewById(R.id.codeHighlight)
-        codeEditText.setText(readTextFromUri(Uri.parse(_uri)))
-        recreate()
-    }
-
+    private val completeFileSaveAs =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                mUri = result.data?.data.toString()
+                mLanguageID = getExtFromURI(Uri.parse(mUri))
+                writeTextToUri(Uri.parse(mUri))
+                showDialogMessageSave()
+            }
+        }
     /**
      * Call this when the user clicks menu -> save as
      *
      */
     private fun startFileSaveAs() {
-        intent = Intent(Intent.ACTION_CREATE_DOCUMENT)
+        val intent = Intent(Intent.ACTION_CREATE_DOCUMENT)
         intent.addCategory(Intent.CATEGORY_OPENABLE)
         intent.type = "*/*"
-        startActivityForResult(intent, _createFileRequestCode)
+        completeFileSaveAs.launch(intent)
     }
-
-    /**
-     * Callback from onActivityResult
-     *
-     * @param data Intent - some intent with a uri (accessed with .data)
-     */
-    private fun completeFileSaveAs(data: Intent?) {
-        _uri = data!!.data.toString()
-        _languageID = getExtFromURI(Uri.parse(_uri))
-        writeTextToUri(Uri.parse(_uri))
-        showDialogMessageSave()
-    }
-
-
     /**
      * Write the file text to the URI
      *
@@ -282,7 +258,6 @@ class ActivityMain : ActivityThemable() {
                     val bytes = codeEditText.text.toString()
                         .toByteArray()
                     it.write(bytes, 0, bytes.size)
-
                 }
             }
             return true
@@ -295,7 +270,6 @@ class ActivityMain : ActivityThemable() {
         }
         return false
     }
-
     /**
      * Read the file text from the URI
      *
@@ -306,25 +280,5 @@ class ActivityMain : ActivityThemable() {
         val inputStream: InputStream? = contentResolver.openInputStream(uri)
         val reader = BufferedReader(InputStreamReader(inputStream))
         return reader.readLines().joinToString("\n")
-    }
-
-    /**
-     * This is basically a callback from an activity
-     *
-     * @param requestCode Int - RequestCode as defined under the Activity private vars
-     * @param resultCode Int - The result code, we only want to do stuff if successful
-     * @param data Intent? - Extra data in the form of an intent. tend to access .data
-     */
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK) {
-            if (requestCode == _readRequestCode) {
-                completeFileOpen(data)
-            }
-            if (requestCode == _createFileRequestCode) {
-                completeFileSaveAs(data)
-            }
-        }
-
     }
 }

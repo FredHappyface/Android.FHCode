@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -40,7 +39,6 @@
                     app:srcCompat="@drawable/light" />
             </com.google.android.material.card.MaterialCardView>
 
-
             <com.google.android.material.card.MaterialCardView style="@style/image_container_style">
 
                 <ImageView
@@ -56,7 +54,6 @@
                     android:scaleType="fitStart"
                     app:srcCompat="@drawable/dark" />
             </com.google.android.material.card.MaterialCardView>
-
 
             <com.google.android.material.card.MaterialCardView style="@style/image_container_style">
 
@@ -74,7 +71,6 @@
                     app:srcCompat="@drawable/black" />
             </com.google.android.material.card.MaterialCardView>
 
-
             <com.google.android.material.card.MaterialCardView style="@style/image_container_style">
 
                 <ImageView
@@ -89,7 +85,6 @@
                     android:scaleType="fitStart"
                     app:srcCompat="@drawable/system" />
             </com.google.android.material.card.MaterialCardView>
-
         </LinearLayout>
 
         <TextView
@@ -106,7 +101,5 @@
             android:value="18"
             android:valueFrom="10"
             android:valueTo="50" />
-
     </LinearLayout>
-
 </ScrollView>

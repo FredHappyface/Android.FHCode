@@ -1,6 +1,5 @@
 package com.fredhappyface.fhcode
 
-
 /**
  * interface LanguageRules implemented by LanguageRulesJava, LanguageRulesPython, LanguageRulesXML, ...
  */

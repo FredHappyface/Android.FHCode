@@ -38,6 +38,11 @@ Code editor for android
 
 ## Features
 
+- Create, edit and save code/ text files
+- Syntax highlighting for Java, XML, Python using regex
+- 4 Themes: Light, Dark, Black, Auto
+- Configurable text size
+
 ## Screenshots
 
 <p>

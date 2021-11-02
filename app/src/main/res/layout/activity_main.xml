@@ -9,7 +9,7 @@
 
 	<EditText
 		android:id="@+id/codeHighlight"
-		style="@style/body_text_style"
+		style="@style/body_text"
 		android:layout_width="0dp"
 		android:layout_height="0dp"
 		android:background="@color/transparent"

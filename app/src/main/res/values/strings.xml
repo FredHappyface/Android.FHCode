@@ -18,10 +18,22 @@
 	<string name="settings_theme_radio4">System</string>
 	<string name="settings_text_size">Text Size</string>
 	<!-- about  -->
-	<string name="about_title">Credits</string>
-	<string name="about_design">Design: Kieran W</string>
-	<string name="about_programming">Programming: Kieran W</string>
-	<string name="about_url">https://github.com/FredHappyface</string>
+	<!-- Info -->
+	<string name="info_heading">Info</string>
+	<string name="info_text">Code editor for android.</string>
+	<!-- Features -->
+	<string name="features_heading">Features</string>
+	<string name="features_text">"- Create, edit and save code/ text files
+		- Syntax highlighting for Java, XML, Python using regex
+		- 4 Themes: Light, Dark, Black, Auto
+		- Configurable text size</string>
+	<!-- License -->
+	<string name="license_heading">MIT License</string>
+	<string name="license_text">"Copyright © FredHappyface</string>
+	<!-- Links -->
+	<string name="links_heading">Links</string>
+	<string name="links_text">"- Project: https://github.com/FredHappyface/Android.FHCode
+- License: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
 	<!-- Saved dialog  -->
 	<string name="dialog_saved_button">OK</string>
 	<string name="dialog_saved_title">Saved!</string>

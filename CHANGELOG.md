@@ -2,6 +2,13 @@
 All major and minor version changes will be documented in this file. Details of
 patch-level version changes can be found in [commit messages](../../commits/master).
 
+## Next_Ver - 2021/11/xx
+
+- Add feature description
+- Use cards (similar style to EweSticker)
+- Add comments to TextHighlight
+- Update fonts
+
 ## 20211030 - 2021/10/30
 
 - Add screenshots to readme

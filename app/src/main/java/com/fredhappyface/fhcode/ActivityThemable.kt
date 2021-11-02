@@ -6,7 +6,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.preference.PreferenceManager
 
-
 /**
  * ActivityThemable class inherits from the AppCompatActivity class - AppCompatActivity with custom
  * themes. Overrides onCreate and onResume to set the theme

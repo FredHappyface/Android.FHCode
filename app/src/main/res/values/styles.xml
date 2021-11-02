@@ -73,38 +73,45 @@
 		<item name="appBarColor">@color/black</item>
 	</style>
 
-	<style name="base_container_style">
-		<item name="android:layout_marginLeft">@dimen/text_content_margin</item>
-		<item name="android:layout_marginRight">@dimen/text_content_margin</item>
-		<item name="android:layout_marginTop">@dimen/text_content_margin_vertical</item>
-		<item name="android:layout_marginBottom">@dimen/text_content_margin_vertical</item>
+	<style name="widthMatchHeightWrap">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">wrap_content</item>
 	</style>
 
-	<style name="image_container_style" parent="Widget.MaterialComponents.CardView">
-		<item name="android:layout_marginLeft">@dimen/text_content_margin</item>
-		<item name="android:layout_marginRight">@dimen/text_content_margin</item>
-		<item name="android:layout_marginTop">@dimen/text_content_margin_vertical</item>
-		<item name="android:layout_marginBottom">@dimen/text_content_margin_vertical</item>
+	<style name="widget" parent="widthMatchHeightWrap">
+		<item name="android:layout_marginStart">@dimen/content_margin</item>
+		<item name="android:layout_marginEnd">@dimen/content_margin</item>
+		<item name="android:layout_marginTop">@dimen/content_margin_top</item>
+		<item name="android:layout_marginBottom">@dimen/content_margin_bottom</item>
+		<item name="android:paddingTop">@dimen/content_margin_top</item>
+		<item name="android:paddingBottom">@dimen/content_margin_top</item>
+	</style>
+
+	<style name="card" parent="Widget.MaterialComponents.CardView">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">wrap_content</item>
+		<item name="android:layout_marginTop">@dimen/content_margin_top</item>
+		<item name="android:layout_marginBottom">@dimen/content_margin_top</item>
+		<item name="android:textSize">@dimen/zero</item>
+		<item name="cardCornerRadius">@dimen/corner</item>
+		<item name="cardBackgroundColor">?attr/backgroundColorSecondary</item>
+	</style>
+
+	<style name="image_container_style" parent="card">
 		<item name="android:orientation">vertical</item>
-		<item name="cardElevation">0dp</item>
-		<item name="cardCornerRadius">8dp</item>
+		<item name="cardElevation">@dimen/zero</item>
 	</style>
 
-	<style name="heading_text_style" parent="base_container_style">
+	<style name="body_text" parent="widget">
 		<item name="android:textColor">?attr/foregroundColorPrimary</item>
-		<item name="android:textSize">@dimen/text_size_h1</item>
-	</style>
-
-	<style name="heading2_text_style" parent="heading_text_style">
-		<item name="android:textSize">@dimen/text_size_h2</item>
-	</style>
-
-	<style name="body_text_style" parent="heading2_text_style">
 		<item name="android:textSize">@dimen/text_size_body</item>
-		<item name="android:fontFamily">@font/firacode</item>
+		<item name="android:layout_width">wrap_content</item>
+	</style>
+
+	<style name="heading" parent="widget">
+		<item name="android:fontFamily">@font/firacode_bold</item>
+		<item name="android:textColor">?attr/foregroundColorAccent</item>
+		<item name="android:textSize">@dimen/text_size_heading</item>
+		<item name="android:layout_marginBottom">@dimen/zero</item>
 	</style>
 </resources>

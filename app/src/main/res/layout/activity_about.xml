@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
@@ -12,26 +12,75 @@
 		android:layout_height="match_parent">
 
 		<LinearLayout
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:orientation="vertical">
+			style="@style/widthMatchHeightWrap"
+			android:orientation="vertical"
+			android:padding="@dimen/content_margin">
+			<!-- Info -->
+			<com.google.android.material.card.MaterialCardView style="@style/card">
 
-			<TextView
-				style="@style/heading_text_style"
-				android:text="@string/about_title" />
+				<LinearLayout
+					style="@style/widthMatchHeightWrap"
+					android:orientation="vertical">
 
-			<TextView
-				style="@style/body_text_style"
-				android:text="@string/about_design" />
+					<TextView
+						style="@style/heading"
+						android:text="@string/info_heading" />
 
-			<TextView
-				style="@style/body_text_style"
-				android:text="@string/about_programming" />
+					<TextView
+						style="@style/body_text"
+						android:text="@string/info_text" />
+				</LinearLayout>
+			</com.google.android.material.card.MaterialCardView>
+			<!-- Features -->
+			<com.google.android.material.card.MaterialCardView style="@style/card">
 
-			<TextView
-				style="@style/body_text_style"
-				android:autoLink="web"
-				android:text="@string/about_url" />
+				<LinearLayout
+					style="@style/widthMatchHeightWrap"
+					android:orientation="vertical">
+
+					<TextView
+						style="@style/heading"
+						android:text="@string/features_heading" />
+
+					<TextView
+						style="@style/body_text"
+						android:text="@string/features_text" />
+				</LinearLayout>
+			</com.google.android.material.card.MaterialCardView>
+			<!-- License -->
+			<com.google.android.material.card.MaterialCardView style="@style/card">
+
+				<LinearLayout
+					style="@style/widthMatchHeightWrap"
+					android:orientation="vertical">
+
+					<TextView
+						style="@style/heading"
+						android:text="@string/license_heading" />
+
+					<TextView
+						style="@style/body_text"
+						android:text="@string/license_text" />
+				</LinearLayout>
+			</com.google.android.material.card.MaterialCardView>
+			<!-- Links -->
+			<com.google.android.material.card.MaterialCardView style="@style/card">
+
+				<LinearLayout
+					style="@style/widthMatchHeightWrap"
+					android:orientation="vertical">
+
+					<TextView
+						style="@style/heading"
+						android:text="@string/links_heading" />
+
+					<TextView
+						style="@style/body_text"
+						android:autoLink="web"
+						android:linksClickable="true"
+						android:text="@string/links_text" />
+				</LinearLayout>
+			</com.google.android.material.card.MaterialCardView>
 		</LinearLayout>
 	</ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.circularreveal.coordinatorlayout.CircularRevealCoordinatorLayout>

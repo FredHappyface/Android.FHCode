@@ -14,7 +14,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.preference.PreferenceManager
 import java.io.*
 
-
 /**
  * ActivityMain class inherits from the ActivityThemable class - provides the settings view
  */

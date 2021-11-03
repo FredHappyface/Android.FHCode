@@ -8,6 +8,10 @@ patch-level version changes can be found in [commit messages](../../commits/mast
 - Use cards (similar style to EweSticker)
 - Add comments to TextHighlight
 - Update fonts
+- Code clean up + documentation improvements
+- The new target SDK version is 31 (Android 12) - previously 29 (Android 10)
+- The new minimum SDK version is 25 (Android 7.1 Nougat) - previously 23 (Android 6 Marshmallow)
+- Add launcher Shortcuts for Settings, About, New File
 
 ## 20211030 - 2021/10/30
 

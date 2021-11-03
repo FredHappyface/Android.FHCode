@@ -42,6 +42,7 @@ Code editor for android
 - Syntax highlighting for Java, XML, Python using regex
 - 4 Themes: Light, Dark, Black, Auto
 - Configurable text size
+- Launcher Shortcuts for Settings, About, New File
 
 ## Screenshots
 
@@ -65,8 +66,8 @@ java -jar .\ktlint --experimental --android --disabled_rules='indent,parameter-l
 ### Kotlin and Android Version
 This app has been written in Kotlin 1.5.0 with the Android Studio IDE.
 
-- The target SDK version is 29 (Android 10)
-- The minimum SDK version is 28 (Android 9 Pie)
+- The target SDK version is 31 (Android 12)
+- The minimum SDK version is 25 (Android 7.1 Nougat)
 
 #### Download Android Studio
 Download the Android Studio IDE from <https://developer.android.com/studio/>.

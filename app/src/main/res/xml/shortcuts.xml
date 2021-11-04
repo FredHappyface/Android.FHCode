@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
-<shortcut
-	android:shortcutId="new_file"
-	android:enabled="true"
-	android:icon="@drawable/ic_shortcut_new_file"
-	android:shortcutShortLabel="@string/shortcut_new_file"
-	android:shortcutLongLabel="@string/shortcut_new_file"
-	android:shortcutDisabledMessage="@string/shortcut_disabled">
-	<intent
-		android:action="android.intent.action.VIEW"
-		android:targetPackage="com.fredhappyface.fhcode"
-		android:targetClass="com.fredhappyface.fhcode.ActivityMain" />
-	<categories android:name="android.shortcut.conversation" />
-	<capability-binding android:key="actions.intent.CREATE_MESSAGE" />
-</shortcut>
-<shortcut
-	android:shortcutId="about"
-	android:enabled="true"
-	android:icon="@drawable/ic_shortcut_about"
-	android:shortcutShortLabel="@string/shortcut_about"
-	android:shortcutLongLabel="@string/shortcut_about"
-	android:shortcutDisabledMessage="@string/shortcut_disabled">
-	<intent
-		android:action="android.intent.action.VIEW"
-		android:targetPackage="com.fredhappyface.fhcode"
-		android:targetClass="com.fredhappyface.fhcode.ActivityAbout" />
-	<categories android:name="android.shortcut.conversation" />
-	<capability-binding android:key="actions.intent.CREATE_MESSAGE" />
-</shortcut>
-<shortcut
-	android:shortcutId="settings"
-	android:enabled="true"
-	android:icon="@drawable/ic_shortcut_settings"
-	android:shortcutShortLabel="@string/shortcut_settings"
-	android:shortcutLongLabel="@string/shortcut_settings"
-	android:shortcutDisabledMessage="@string/shortcut_disabled">
-	<intent
-		android:action="android.intent.action.VIEW"
-		android:targetPackage="com.fredhappyface.fhcode"
-		android:targetClass="com.fredhappyface.fhcode.ActivitySettings" />
-	<categories android:name="android.shortcut.conversation" />
-	<capability-binding android:key="actions.intent.CREATE_MESSAGE" />
-</shortcut>
+	<shortcut
+		android:enabled="true"
+		android:icon="@drawable/ic_shortcut_new_file"
+		android:shortcutDisabledMessage="@string/shortcut_disabled"
+		android:shortcutId="new_file"
+		android:shortcutLongLabel="@string/shortcut_new_file"
+		android:shortcutShortLabel="@string/shortcut_new_file">
+		<intent
+			android:action="android.intent.action.VIEW"
+			android:targetClass="com.fredhappyface.fhcode.ActivityMain"
+			android:targetPackage="com.fredhappyface.fhcode" />
+		<categories android:name="android.shortcut.conversation" />
+		<capability-binding android:key="actions.intent.CREATE_MESSAGE" />
+	</shortcut>
+	<shortcut
+		android:enabled="true"
+		android:icon="@drawable/ic_shortcut_about"
+		android:shortcutDisabledMessage="@string/shortcut_disabled"
+		android:shortcutId="about"
+		android:shortcutLongLabel="@string/shortcut_about"
+		android:shortcutShortLabel="@string/shortcut_about">
+		<intent
+			android:action="android.intent.action.VIEW"
+			android:targetClass="com.fredhappyface.fhcode.ActivityAbout"
+			android:targetPackage="com.fredhappyface.fhcode" />
+		<categories android:name="android.shortcut.conversation" />
+		<capability-binding android:key="actions.intent.CREATE_MESSAGE" />
+	</shortcut>
+	<shortcut
+		android:enabled="true"
+		android:icon="@drawable/ic_shortcut_settings"
+		android:shortcutDisabledMessage="@string/shortcut_disabled"
+		android:shortcutId="settings"
+		android:shortcutLongLabel="@string/shortcut_settings"
+		android:shortcutShortLabel="@string/shortcut_settings">
+		<intent
+			android:action="android.intent.action.VIEW"
+			android:targetClass="com.fredhappyface.fhcode.ActivitySettings"
+			android:targetPackage="com.fredhappyface.fhcode" />
+		<categories android:name="android.shortcut.conversation" />
+		<capability-binding android:key="actions.intent.CREATE_MESSAGE" />
+	</shortcut>
 </shortcuts>

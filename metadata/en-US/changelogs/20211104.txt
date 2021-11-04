@@ -1,0 +1,10 @@
+<ul>
+<li>Add feature description</li>
+<li>Use cards (similar style to EweSticker)</li>
+<li>Add comments to TextHighlight</li>
+<li>Update fonts</li>
+<li>Code clean up + documentation improvements</li>
+<li>The new target SDK version is 31 (Android 12) - previously 29 (Android 10)</li>
+<li>The new minimum SDK version is 26 (Android 8 Oreo) - previously 23 (Android 6 Marshmallow)</li>
+<li>Add launcher Shortcuts for Settings, About, New File</li>
+</ul>

@@ -2,7 +2,7 @@
 All major and minor version changes will be documented in this file. Details of
 patch-level version changes can be found in [commit messages](../../commits/master).
 
-## Next_Ver - 2021/11/xx
+## 20211104 - 2021/11/04
 
 - Add feature description
 - Use cards (similar style to EweSticker)
@@ -10,7 +10,7 @@ patch-level version changes can be found in [commit messages](../../commits/mast
 - Update fonts
 - Code clean up + documentation improvements
 - The new target SDK version is 31 (Android 12) - previously 29 (Android 10)
-- The new minimum SDK version is 25 (Android 7.1 Nougat) - previously 23 (Android 6 Marshmallow)
+- The new minimum SDK version is 26 (Android 8 Oreo) - previously 23 (Android 6 Marshmallow)
 - Add launcher Shortcuts for Settings, About, New File
 
 ## 20211030 - 2021/10/30

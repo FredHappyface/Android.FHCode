@@ -2,9 +2,8 @@ Code editor for android
 
 Features
 
-<ul>
-<li>Create, edit and save code/ text files</li>
-<li>Syntax highlighting for Java, XML, Python using regex</li>
-<li>4 Themes: Light, Dark, Black, Auto</li>
-<li>Configurable text size</li>
-</ul>
+- Create, edit and save code/ text files
+- Syntax highlighting for Java, XML, Python using regex
+- 4 Themes: Light, Dark, Black, Auto
+- Configurable text size
+- Launcher Shortcuts for Settings, About, New File

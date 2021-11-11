@@ -64,12 +64,14 @@ java -jar .\ktlint --experimental --android --disabled_rules='indent,parameter-l
 ## Language Information
 
 ### Kotlin and Android Version
+
 This app has been written in Kotlin 1.5.0 with the Android Studio IDE.
 
 - The target SDK version is 31 (Android 12)
 - The minimum SDK version is 26 (Android 8 Oreo)
 
 #### Download Android Studio
+
 Download the Android Studio IDE from <https://developer.android.com/studio/>.
 For Windows, double click the downloaded .exe file and follow the instructions
 provided by the installer - it will download the Android emulator and the
@@ -99,7 +101,7 @@ alt="Get it on F-Droid" height="80">](https://f-droid.org/en/packages/com.fredha
 Follow the link to the listing on F-Droid by clicking on the badge above,
 then download/ install
 -->
-<!--
+
 ### Get it on Google Play
 
 1. Open the Google Play app
@@ -112,7 +114,6 @@ alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/det
 
 Follow the link to the listing on Google Play by clicking on the badge above,
 then download/ install
--->
 
 ### Download the APK
 
@@ -164,13 +165,16 @@ https://help.github.com/en/desktop/contributing-to-projects/cloning-a-repository
 ## Community Files
 
 ### Licence
+
 MIT License
 (See the [LICENSE](/LICENSE.md) for more information.)
 
 ### Changelog
+
 See the [Changelog](/CHANGELOG.md) for more information.
 
 ### Code of Conduct
+
 Online communities include people from many backgrounds. The *Project*
 contributors are committed to providing a friendly, safe and welcoming
 environment for all. Please see the
@@ -178,16 +182,19 @@ environment for all. Please see the
  for more information.
 
 ### Contributing
+
 Contributions are welcome, please see the
 [Contributing Guidelines](https://github.com/FredHappyface/.github/blob/master/CONTRIBUTING.md)
 for more information.
 
 ### Security
+
 Thank you for improving the security of the project, please see the
 [Security Policy](https://github.com/FredHappyface/.github/blob/master/SECURITY.md)
 for more information.
 
 ### Support
+
 Thank you for using this project, I hope it is of use to you. Please be aware that
 those involved with the project often do so for fun along with other commitments
 (such as work, family, etc). Please see the
@@ -195,6 +202,7 @@ those involved with the project often do so for fun along with other commitments
 for more information.
 
 ### Rationale
+
 The rationale acts as a guide to various processes regarding projects such as
 the versioning scheme and the programming styles used. Please see the
 [Rationale](https://github.com/FredHappyface/.github/blob/master/RATIONALE.md)

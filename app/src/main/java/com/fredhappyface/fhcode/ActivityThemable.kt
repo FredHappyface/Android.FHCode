@@ -11,8 +11,8 @@ import androidx.preference.PreferenceManager
  * themes. Overrides onCreate and onResume to set the theme
  */
 open class ActivityThemable : AppCompatActivity() {
-	internal lateinit var mSharedPreferences: SharedPreferences
-	internal var mCurrentTheme = 0
+	internal lateinit var sharedPreferences: SharedPreferences
+	internal var currentTheme = 0
 
 	/**
 	 * Triggered when the activity is created. Sets the theme to one that the user selected
@@ -20,9 +20,9 @@ open class ActivityThemable : AppCompatActivity() {
 	 */
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-		mCurrentTheme = mSharedPreferences.getInt("theme", 3)
-		when (mCurrentTheme) {
+		this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+		this.currentTheme = this.sharedPreferences.getInt("theme", 3)
+		when (this.currentTheme) {
 			0 -> setTheme(R.style.LightTheme)
 			1 -> setTheme(R.style.DarkTheme)
 			2 -> setTheme(R.style.BlackTheme)
@@ -39,9 +39,9 @@ open class ActivityThemable : AppCompatActivity() {
 	 */
 	override fun onResume() {
 		super.onResume()
-		val theme = mSharedPreferences.getInt("theme", 3)
-		if (mCurrentTheme != theme) {
-			mCurrentTheme = theme
+		val theme = this.sharedPreferences.getInt("theme", 3)
+		if (this.currentTheme != theme) {
+			this.currentTheme = theme
 			recreate()
 		}
 	}

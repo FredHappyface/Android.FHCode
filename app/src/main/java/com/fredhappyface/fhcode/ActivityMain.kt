@@ -22,9 +22,9 @@ class ActivityMain : ActivityThemable() {
 	 * Storage of private vars. These being _uri (stores uri of opened file); _createFileRequestCode
 	 * (custom request code); _readRequestCode (request code for reading a file)
 	 */
-	private var mCurrentTextSize = 0
-	private var mUri: String? = null
-	private var mLanguageID = "java"
+	private var currentTextSize = 0
+	private var uri: String? = null
+	private var languageID = "java"
 
 	/**
 	 * Override the onCreate method from ActivityThemable adding the activity_main view and configuring
@@ -36,16 +36,16 @@ class ActivityMain : ActivityThemable() {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
 		// Get saved state
-		mUri = savedInstanceState?.getString("_uri", null)
-		mLanguageID = savedInstanceState?.getString("_languageID", "java").toString()
+		this.uri = savedInstanceState?.getString("_uri", null)
+		this.languageID = savedInstanceState?.getString("_languageID", "java").toString()
 		// Set up correct colour
 		var colours: Colours = ColoursDark()
-		if (mCurrentTheme == 0) {
+		if (this.currentTheme == 0) {
 			colours = ColoursLight()
 		}
 		// Set up correct language
 		var languageRules: LanguageRules = LanguageRulesJava()
-		when (mLanguageID) {
+		when (this.languageID) {
 			"py" -> languageRules = LanguageRulesPython()
 			"xml" -> languageRules = LanguageRulesXML()
 		}
@@ -59,9 +59,9 @@ class ActivityMain : ActivityThemable() {
 		textHighlight.start()
 		codeEditText.setText(R.string.blank_file_text)
 		// Apply text size
-		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-		mCurrentTextSize = mSharedPreferences.getInt("text", 18)
-		codeEditText.textSize = mCurrentTextSize.toFloat()
+		this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
+		this.currentTextSize = this.sharedPreferences.getInt("text", 18)
+		codeEditText.textSize = this.currentTextSize.toFloat()
 	}
 
 	/**
@@ -70,9 +70,9 @@ class ActivityMain : ActivityThemable() {
 	 */
 	override fun onResume() {
 		super.onResume()
-		val textSize = mSharedPreferences.getInt("text", 18)
-		if (mCurrentTextSize != textSize) {
-			mCurrentTextSize = textSize
+		val textSize = this.sharedPreferences.getInt("text", 18)
+		if (this.currentTextSize != textSize) {
+			this.currentTextSize = textSize
 			recreate()
 		}
 	}
@@ -130,8 +130,8 @@ class ActivityMain : ActivityThemable() {
 	 */
 	override fun onSaveInstanceState(outState: Bundle) {
 		super.onSaveInstanceState(outState)
-		outState.putString("_languageID", mLanguageID)
-		outState.putString("_uri", mUri)
+		outState.putString("_languageID", this.languageID)
+		outState.putString("_uri", this.uri)
 	}
 
 	/**
@@ -191,8 +191,8 @@ class ActivityMain : ActivityThemable() {
 			dialog.dismiss()
 			val codeEditText: EditText = findViewById(R.id.codeHighlight)
 			codeEditText.setText(R.string.blank_file_text)
-			mLanguageID = "java"
-			mUri = null
+			this.languageID = "java"
+			this.uri = null
 			recreate()
 		}
 		alertDialog.show()
@@ -203,8 +203,8 @@ class ActivityMain : ActivityThemable() {
 	 *
 	 */
 	private fun doFileSave() {
-		if (mUri != null) {
-			writeTextToUri(Uri.parse(mUri ?: return))
+		if (this.uri != null) {
+			writeTextToUri(Uri.parse(this.uri ?: return))
 			showDialogMessageSave()
 		} else {
 			startFileSaveAs()
@@ -212,15 +212,15 @@ class ActivityMain : ActivityThemable() {
 	}
 
 	/**
-	 * Handles ACTION_OPEN_DOCUMENT result and sets mUri, mLanguageID and codeEditText
+	 * Handles ACTION_OPEN_DOCUMENT result and sets this.uri, mLanguageID and codeEditText
 	 */
 	private val completeFileOpen =
 		registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
 			if (result.resultCode == Activity.RESULT_OK) {
-				mUri = result.data?.data.toString()
-				mLanguageID = getExtFromURI(Uri.parse(mUri))
+				this.uri = result.data?.data.toString()
+				this.languageID = getExtFromURI(Uri.parse(this.uri))
 				val codeEditText: EditText = findViewById(R.id.codeHighlight)
-				codeEditText.setText(readTextFromUri(Uri.parse(mUri)))
+				codeEditText.setText(readTextFromUri(Uri.parse(this.uri)))
 				recreate()
 			}
 		}
@@ -237,14 +237,14 @@ class ActivityMain : ActivityThemable() {
 	}
 
 	/**
-	 * Handles ACTION_CREATE_DOCUMENT result and sets mUri, mLanguageID and triggers writeTextToUri
+	 * Handles ACTION_CREATE_DOCUMENT result and sets this.uri, mLanguageID and triggers writeTextToUri
 	 */
 	private val completeFileSaveAs =
 		registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
 			if (result.resultCode == Activity.RESULT_OK) {
-				mUri = result.data?.data.toString()
-				mLanguageID = getExtFromURI(Uri.parse(mUri))
-				writeTextToUri(Uri.parse(mUri))
+				this.uri = result.data?.data.toString()
+				this.languageID = getExtFromURI(Uri.parse(this.uri))
+				writeTextToUri(Uri.parse(this.uri))
 				showDialogMessageSave()
 			}
 		}

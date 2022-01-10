@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.provider.OpenableColumns
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
@@ -13,6 +14,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.PreferenceManager
 import java.io.*
+
+private const val MAX_FILE_SIZE = 1024 * 1024 // 1Mb
 
 /**
  * ActivityMain class inherits from the ActivityThemable class - provides the settings view
@@ -294,6 +297,14 @@ class ActivityMain : ActivityThemable() {
 	 * @return String - contents of the file (decoded per readLines())
 	 */
 	private fun readTextFromUri(uri: Uri): String {
+		contentResolver.query(uri, null, null, null, null).use { cursor ->
+			val sizeIdx = cursor?.getColumnIndex(OpenableColumns.SIZE)
+			cursor?.moveToFirst()
+			val size = sizeIdx?.let { cursor.getLong(it) }
+			if (size ?: 0 > MAX_FILE_SIZE) {
+				return "File too large! (over $MAX_FILE_SIZE bytes)\n"
+			}
+		}
 		val inputStream: InputStream? = contentResolver.openInputStream(uri)
 		val reader = BufferedReader(InputStreamReader(inputStream))
 		return reader.readLines().joinToString("\n")

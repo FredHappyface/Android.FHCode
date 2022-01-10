@@ -7,6 +7,7 @@ patch-level version changes can be found in [commit messages](../../commits/mast
 
 - Update dependencies
 - Remove old launcher foreground
+- Set file size limit to 1Mb to defend against `java.lang.OutOfMemoryError`
 
 ## 20211104 - 2021/11/04
 

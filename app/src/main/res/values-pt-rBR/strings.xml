@@ -1,0 +1,52 @@
+<resources>
+	<string name="app_name">FHCode</string>
+	<!-- Strings for menu_main.xml -->
+	<string name="action_new_file">Novo arquivo</string>
+	<string name="action_open">Abrir</string>
+	<string name="action_save">Salvar</string>
+	<string name="action_save_as">Salvar como</string>
+	<string name="action_about">Sobre</string>
+	<string name="action_settings">Configurações</string>
+	<!-- Strings for about + settings activities  -->
+	<string name="title_activity_about">FHCode - sobre</string>
+	<string name="title_activity_settings">FHCode - configurações</string>
+	<!-- settings  -->
+	<string name="settings_theme">Tema</string>
+	<string name="settings_theme_radio1">Claro</string>
+	<string name="settings_theme_radio2">Escuro</string>
+	<string name="settings_theme_radio3">Preto</string>
+	<string name="settings_theme_radio4">Sistema</string>
+	<string name="settings_text_size">Tamanho de texto</string>
+	<!-- about  -->
+	<!-- Info -->
+	<string name="info_heading">Detalhes</string>
+	<string name="info_text">Editor de código para Android.</string>
+	<!-- Features -->
+	<string name="features_heading">Funcionalidades</string>
+	<string name="features_text">"- Você pode criar, editar e salvar arquivos de código/texto
+- Destaque de sintaxe para Java, XML, Python usando Regex
+- 4 Temas: Claro, Escuro, Preto, Automático
+- Ajustar tamanho de texto
+- Usar atalhos de lançador para Configurações, Sobre, Novo arquivo</string>
+	<!-- License -->
+	<string name="license_heading">Licença MIT</string>
+	<string name="license_text">"Diretos autorais © FredHappyface</string>
+	<!-- Links -->
+	<string name="links_heading">Links</string>
+	<string name="links_text">"- Projeto: https://github.com/FredHappyface/Android.FHCode
+- Licença: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
+	<!-- Saved dialog  -->
+	<string name="dialog_saved_button">OK</string>
+	<string name="dialog_saved_title">Salvo!</string>
+	<!-- New file dialog  -->
+	<string name="dialog_new_confirm">Sim</string>
+	<string name="dialog_new_cancel">Não</string>
+	<string name="dialog_new_title">Criar novo arquivo?</string>
+	<!-- Blank file text  -->
+	<string name="blank_file_text">[Este é um arquivo vazio, você pode abrir um outro arquivo ou editar este aqui e salvar]</string>
+	<!-- Strings for shortcuts.xml -->
+	<string name="shortcut_about">Sobre</string>
+	<string name="shortcut_settings">Configurações</string>
+	<string name="shortcut_new_file">Novo arquivo</string>
+	<string name="shortcut_disabled">Atalho desativado</string>
+</resources>

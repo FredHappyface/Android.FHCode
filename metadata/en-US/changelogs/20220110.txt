@@ -1,0 +1,5 @@
+<ul>
+<li>Update dependencies</li>
+<li>Remove old launcher foreground</li>
+<li>Set file size limit to 1Mb to defend against <code>java.lang.OutOfMemoryError</code></li>
+</ul>

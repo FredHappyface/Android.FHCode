@@ -15,12 +15,15 @@ Code editor for android
 
 - [Features](#features)
 - [Screenshots](#screenshots)
-- [Lint with](#lint-with)
+- [Documentation](#documentation)
+- [Gradle tasks](#gradle-tasks)
 - [Language Information](#language-information)
 	- [Kotlin and Android Version](#kotlin-and-android-version)
 		- [Download Android Studio](#download-android-studio)
 - [How to Run](#how-to-run)
 	- [Build From Source](#build-from-source)
+	- [Get it on F-Droid](#get-it-on-f-droid)
+	- [Get it on Google Play](#get-it-on-google-play)
 	- [Download the APK](#download-the-apk)
 - [Download Project](#download-project)
 	- [Clone](#clone)
@@ -55,11 +58,27 @@ Code editor for android
 <img src="metadata/en-US/images/phoneScreenshots/screenshot-6.png" alt="Screenshot 6" width="300">
 </p>
 
-## Lint with
+## Documentation
 
-```txt
-java -jar .\ktlint --experimental --android --disabled_rules='indent,parameter-list-wrapping,experimental:argument-list-wrapping'
-```
+A high-level overview of how the documentation is organized organized will help you know
+where to look for certain things:
+
+<!--
+- [Tutorials](/documentation/tutorials) take you by the hand through a series of steps to get
+  started using the software. Start here if you’re new.
+-->
+- The [Technical Reference](/documentation/reference) documents APIs and other aspects of the
+  machinery. This documentation describes how to use the classes and functions at a lower level
+  and assume that you have a good high-level understanding of the software.
+<!--
+- The [Help](/documentation/help) guide provides a starting point and outlines common issues that you
+  may have.
+-->
+
+## Gradle tasks
+
+- ktlintCheck (`gradlew ktlintCheck`): run ktlint over the codebase
+- genDocs (`gradlew genDocs`): generate the api reference using dokka
 
 ## Language Information
 
@@ -87,27 +106,25 @@ Android SDK. Additional information can be found at
 3. In Android Studio click File > Open and then navigate to the project file
 (Android studio defaults to the directory of the last opened file)
 
-<!--
 ### Get it on F-Droid
 
 1. Open the F-Droid app
 2. Search for FHCode
 
-**Or**
+or
 
 [<img src="readme-assets/badges/f-droid-download.png"
 alt="Get it on F-Droid" height="80">](https://f-droid.org/en/packages/com.fredhappyface.fhcode/)
 
 Follow the link to the listing on F-Droid by clicking on the badge above,
 then download/ install
--->
 
 ### Get it on Google Play
 
 1. Open the Google Play app
 2. Search for FHCode
 
-**Or**
+or
 
 [<img src="readme-assets/badges/google-play-download.png"
 alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/details?id=com.fredhappyface.fhcode)
@@ -121,7 +138,7 @@ then download/ install
 2. Select the debug or release APK depending on your preference. Note that the
 filenames are in the form: com.fredhappyface.fhcode-(version)-(debug|release).apk
 
-**Or**
+or
 
 [<img src="readme-assets/badges/direct-apk-download.png" alt="Direct apk
 download" height="80">](/app/release)

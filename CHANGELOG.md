@@ -4,11 +4,12 @@ All major and minor version changes will be documented in this file. Details of
 patch-level version changes can be found in [commit messages](../../commits/master).
 
 <!--
-## Next_Ver - 2022/xx/xx
+## Next_Ver - 2023/xx/xx
 -->
 
-## Next_Ver - 2022/xx/xx
+## 20230820 - 2023/08/20
 
+- Update dependencies
 - New Feature: Add Gradle tasks
 	- ktlintCheck (`gradlew ktlintCheck`): run ktlint over the codebase
 	- genDocs (`gradlew genDocs`): generate the api reference using dokka

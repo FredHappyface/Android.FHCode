@@ -1,0 +1,11 @@
+<h2 id="section">20230820 - 2023/08/20</h2>
+<ul>
+<li>Update dependencies</li>
+<li>New Feature: Add Gradle tasks
+<ul>
+<li>ktlintCheck (<code>gradlew ktlintCheck</code>): run ktlint over the
+codebase</li>
+<li>genDocs (<code>gradlew genDocs</code>): generate the api reference
+using dokka</li>
+</ul></li>
+</ul>

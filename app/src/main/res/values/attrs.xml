@@ -6,7 +6,6 @@
 	<!-- Foreground Colours -->
 	<attr name="foregroundColorPrimary" format="reference"></attr>
 	<attr name="foregroundColorSecondary" format="reference"></attr>
-	<attr name="foregroundColorAccent" format="reference"></attr>
 	<!-- Appbar Colours -->
 	<attr name="appBarColor" format="reference"></attr>
 	<attr name="appBarTextColor" format="reference"></attr>

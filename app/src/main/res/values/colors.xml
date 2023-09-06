@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="magenta">#ffaa37d7</color>
-	<color name="black">#FF000000</color>
-	<color name="white">#FFFFFFFF</color>
+	<color name="accent">#aa37d7</color>
+	<color name="onAccent">#FFFFFF</color>
+
+	<color name="bg1_light">#fffbff</color>
+	<color name="bg2_light">#faeffc</color>
+	<color name="fg1_light">#1e1b1e</color>
+	<color name="fg2_light">#1e1b1e</color>
+
+	<color name="bg1_dark">#1e1b1e</color>
+	<color name="bg2_dark">#282329</color>
+	<color name="fg1_dark">#e8e0e5</color>
+	<color name="fg2_dark">#e8e0e5</color>
+
+	<color name="black">#000000</color>
 	<color name="transparent">#00000000</color>
-	<color name="darkGrey">#181A1F</color>
-	<color name="grey">#282C34</color>
-	<color name="lightGrey">#EAEAEB</color>
 </resources>

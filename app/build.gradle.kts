@@ -6,7 +6,7 @@ plugins {
 }
 
 tasks.dokkaGfm.configure {
-	outputDirectory.set(buildDir.resolve("../../documentation/reference"))
+	outputDirectory.set(file(layout.buildDirectory.dir("../../documentation/reference")))
 	dokkaSourceSets {
 		named("main") {
 			skipDeprecated.set(true)
@@ -19,7 +19,7 @@ tasks.dokkaGfm.configure {
 }
 
 tasks.register("genDocs") {
-	val ref = buildDir.resolve("../../documentation/reference")
+	val ref = layout.buildDirectory.dir("../../documentation/reference")
 	delete(ref)
 	dependsOn("dokkaGfm")
 	doLast {
@@ -39,8 +39,8 @@ android {
 		applicationId = "com.fredhappyface.fhcode"
 		minSdk = 26
 		targetSdk = 33
-		versionCode = 20230820
-		versionName = "20230820"
+		versionCode = 20230828
+		versionName = "20230828"
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 		setProperty("archivesBaseName", "$applicationId-$versionName")
 	}
@@ -64,6 +64,7 @@ android {
 }
 
 dependencies {
+	dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.8.20")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
 	implementation("androidx.core:core-ktx:1.10.1")
 	implementation("androidx.appcompat:appcompat:1.6.1")

@@ -27,7 +27,7 @@ class ActivitySettings : ActivityThemable() {
 			sharedPreferences.getInt("theme", 3)
 		) as MaterialCardView
 		cardView.strokeWidth = (3 * applicationContext.resources.displayMetrics.density).toInt()
-		cardView.strokeColor = resources.getColor(R.color.magenta, theme)
+		cardView.strokeColor = resources.getColor(R.color.accent, theme)
 		// Text save
 		val textSlider = findViewById<Slider>(R.id.slider)
 		textSlider.addOnChangeListener(Slider.OnChangeListener { _, value, _ ->

@@ -16,7 +16,7 @@
 		<com.google.android.material.card.MaterialCardView style="@style/card">
 
 			<LinearLayout
-				style="@style/widthMatchHeightWrap"
+				style="@style/cardchild"
 				android:orientation="vertical">
 
 				<TextView
@@ -98,7 +98,7 @@
 		<com.google.android.material.card.MaterialCardView style="@style/card">
 
 			<LinearLayout
-				style="@style/widthMatchHeightWrap"
+				style="@style/cardchild"
 				android:orientation="vertical">
 
 				<TextView

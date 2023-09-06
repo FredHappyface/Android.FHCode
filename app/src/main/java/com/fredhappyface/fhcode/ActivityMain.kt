@@ -13,7 +13,12 @@ import android.widget.EditText
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.PreferenceManager
-import java.io.*
+import java.io.BufferedReader
+import java.io.FileNotFoundException
+import java.io.FileOutputStream
+import java.io.IOException
+import java.io.InputStream
+import java.io.InputStreamReader
 
 private const val MAX_FILE_SIZE = 1024 * 1024 // 1Mb
 
@@ -107,21 +112,27 @@ class ActivityMain : ActivityThemable() {
 			R.id.action_new_file -> {
 				doNewFile(); true
 			}
+
 			R.id.action_open -> {
 				startFileOpen(); true
 			}
+
 			R.id.action_save -> {
 				doFileSave(); true
 			}
+
 			R.id.action_save_as -> {
 				startFileSaveAs(); true
 			}
+
 			R.id.action_settings -> {
 				startActivity(Intent(this, ActivitySettings::class.java)); true
 			}
+
 			R.id.action_about -> {
 				startActivity(Intent(this, ActivityAbout::class.java)); true
 			}
+
 			else -> super.onOptionsItemSelected(item)
 		}
 	}

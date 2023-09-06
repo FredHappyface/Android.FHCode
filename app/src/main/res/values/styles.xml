@@ -5,7 +5,7 @@
 		<item name="colorPrimaryVariant">@color/accent</item>
 		<item name="colorOnPrimary">@color/onAccent</item>
 		<!-- Status bar color. -->
-		<item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+		<item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 		<!-- Customize your theme here. -->
 		<item name="navigationBarColor">@color/accent</item>
 		<item name="appBarColor">@color/accent</item>

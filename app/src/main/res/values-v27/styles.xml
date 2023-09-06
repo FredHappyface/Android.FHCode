@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>	<style name="AppTheme" parent="Theme.Material3.DayNight">
+	<!-- Primary brand color. -->
+	<item name="colorPrimaryVariant">@color/accent</item>
+	<item name="colorOnPrimary">@color/onAccent</item>
+	<!-- Status bar color. -->
+	<item name="android:statusBarColor" >?attr/colorPrimaryVariant</item>
+	<!-- Customize your theme here. -->
+	<item name="android:windowLightNavigationBar">?attr/light_theme</item>
+	<item name="navigationBarColor">?attr/backgroundColorPrimary</item>
+	<item name="appBarColor">@color/accent</item>
+	<item name="appBarTextColor">@color/onAccent</item>
+	<item name="android:navigationBarColor">?attr/navigationBarColor</item>
+	<item name="colorPrimaryDark">?attr/navigationBarColor</item>
+	<item name="colorPrimary">?attr/appBarColor</item>
+	<item name="colorAccent">@color/accent</item>
+	<item name="android:textColorPrimary">?attr/foregroundColorPrimary</item>
+	<item name="android:textColorSecondary">?attr/foregroundColorSecondary</item>
+	<item name="android:textColor">?attr/foregroundColorPrimary</item>
+	<item name="android:windowBackground">?attr/backgroundColorPrimary</item>
+	<item name="android:fontFamily">@font/firacode_medium</item>
+	<item name="popupMenuBackground">?attr/backgroundColorSecondary</item>
+	<item name="android:dialogTheme">@style/DialogTheme</item>
+	<item name="actionBarStyle">@style/AppBarBackground</item>
+	<item name="actionBarTheme">@style/AppBarText</item>
+	<item name="actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+</style></resources>

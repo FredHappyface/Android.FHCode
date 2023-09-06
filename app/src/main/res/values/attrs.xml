@@ -10,4 +10,5 @@
 	<attr name="appBarColor" format="reference"></attr>
 	<attr name="appBarTextColor" format="reference"></attr>
 	<attr name="navigationBarColor" format="reference"></attr>
+	<attr name="light_theme" format="reference"></attr>
 </resources>

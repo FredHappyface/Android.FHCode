@@ -1,6 +1,6 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 	<!-- Base application theme. -->
-	<style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+	<style name="AppTheme" parent="Theme.Material3.DayNight">
 		<!-- Primary brand color. -->
 		<item name="colorPrimaryVariant">@color/accent</item>
 		<item name="colorOnPrimary">@color/onAccent</item>
@@ -9,6 +9,7 @@
 		<!-- Customize your theme here. -->
 		<item name="navigationBarColor">@color/accent</item>
 		<item name="appBarColor">@color/accent</item>
+		<item name="light_theme">@bool/_false</item>
 		<item name="appBarTextColor">@color/onAccent</item>
 		<item name="android:navigationBarColor">?attr/navigationBarColor</item>
 		<item name="colorPrimaryDark">?attr/navigationBarColor</item>
@@ -37,6 +38,7 @@
 	</style>
 
 	<style name="LightTheme" parent="AppTheme">
+		<item name="light_theme">@bool/_true</item>
 		<item name="backgroundColorPrimary">@color/bg1_light</item>
 		<item name="backgroundColorSecondary">@color/bg2_light</item>
 		<item name="foregroundColorPrimary">@color/fg1_light</item>

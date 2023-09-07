@@ -1,2 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="settings_theme_radio2">Oscuro</string>
+    <string name="shortcut_settings">Encuadres</string>
+    <string name="action_new_file">Lima nueva</string>
+    <string name="settings_theme_radio1">Ligero</string>
+    <string name="action_about">Aproximadamente</string>
+    <string name="dialog_saved_title">Salvado!</string>
+    <string name="shortcut_disabled">El atajo Inutilizado</string>
+    <string name="links_heading">Enlaces</string>
+    <string name="dialog_new_title">Crea Lima Nueva\?</string>
+    <string name="info_heading">Info</string>
+    <string name="action_save_as">Salva Tan</string>
+    <string name="settings_theme_radio3">Negro</string>
+    <string name="links_text">- Proyecto: https://github.com/fredhappyface/android.fhcode
+\n- Licencia: https://github.com/fredhappyface/android.fhcode/blob/main/license.md</string>
+    <string name="blank_file_text">[Esto es una lima de espacio , abre una lima o editar esta lima y salvar]</string>
+    <string name="license_text">Copyright © FredHappyface</string>
+    <string name="dialog_new_confirm">Sí</string>
+    <string name="action_open">Abierto</string>
+    <string name="settings_theme">Tema</string>
+    <string name="title_activity_settings">FHCode - Encuadres</string>
+    <string name="shortcut_about">Aproximadamente</string>
+    <string name="title_activity_about">FHCode - Aproximadamente</string>
+    <string name="settings_text_size">Medida de texto</string>
+    <string name="features_heading">Características</string>
+    <string name="license_heading">MIT Licencia</string>
+    <string name="action_save">Salva</string>
+    <string name="settings_theme_radio4">Sistema</string>
+    <string name="dialog_new_cancel">Núm</string>
+    <string name="action_settings">Encuadres</string>
+    <string name="info_text">Editor de código para androide.</string>
+    <string name="app_name">FHCode</string>
+    <string name="dialog_saved_button">VALE</string>
+    <string name="features_text">- Crear, edita y salvar limas/ de texto del código
+\n- la sintaxis que destaca para Java, XML, la pitón que utiliza regex
+\n- 4 Temas: Ligero, Oscuridad, Negro, Coche
+\n- Configurable medida de texto
+\n- Atajos de Lanzador para Encuadres, Aproximadamente, Lima Nueva</string>
+    <string name="shortcut_new_file">Lima nueva</string>
+</resources>

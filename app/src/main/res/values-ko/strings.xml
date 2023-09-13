@@ -1,2 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="settings_theme_radio2">어두운 화면</string>
+    <string name="shortcut_settings">설정</string>
+    <string name="action_new_file">새 파일</string>
+    <string name="settings_theme_radio1">밝은 화면</string>
+    <string name="action_about">About</string>
+    <string name="dialog_saved_title">저장 완료!</string>
+    <string name="shortcut_disabled">바로가기가 비활성화됨</string>
+    <string name="links_heading">링크</string>
+    <string name="dialog_new_title">새로운 파일을 만들까요\?</string>
+    <string name="info_heading">정보</string>
+    <string name="action_save_as">다른 이름으로 저장</string>
+    <string name="settings_theme_radio3">검정 화면</string>
+    <string name="links_text">- 프로젝트: https://github.com/FredHappyface/Android.FHCode
+\n- 라이센스: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
+    <string name="blank_file_text">[이 파일은 빈 파일입니다. 파일을 열거나 이 파일을 편집하여 저장합니다]</string>
+    <string name="license_text">Copyright © FredHappyface</string>
+    <string name="dialog_new_confirm">네</string>
+    <string name="action_open">열기</string>
+    <string name="settings_theme">테마</string>
+    <string name="title_activity_settings">FHCode - 설정</string>
+    <string name="shortcut_about">About</string>
+    <string name="title_activity_about">FHCode - 소개</string>
+    <string name="settings_text_size">텍스트 사이즈</string>
+    <string name="features_heading">특징</string>
+    <string name="license_heading">MIT 라이센스</string>
+    <string name="action_save">저장</string>
+    <string name="settings_theme_radio4">시스템</string>
+    <string name="dialog_new_cancel">아니오</string>
+    <string name="action_settings">설정</string>
+    <string name="info_text">안드로이드용 코드 에디터.</string>
+    <string name="app_name">FHCode</string>
+    <string name="dialog_saved_button">네</string>
+    <string name="features_text">- 코드/텍스트 파일 만들기, 편집 및 저장
+\n- regex를 사용한 Java, XML, Python 구문 강조
+\n- 4가지 테마: 밝은 화면, 어두운 화면, 검정 화면, 자동
+\n- 텍스트 크기 설정 가능
+\n- 설정, 정보, 새 파일에 대한 바로가기 단추</string>
+    <string name="shortcut_new_file">새 파일</string>
+</resources>

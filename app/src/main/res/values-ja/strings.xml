@@ -1,2 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="settings_theme_radio2">ダーク</string>
+    <string name="shortcut_settings">設定</string>
+    <string name="action_new_file">新しいファイル</string>
+    <string name="settings_theme_radio1">ライト</string>
+    <string name="action_about">このアプリについて</string>
+    <string name="dialog_saved_title">保存しました!</string>
+    <string name="shortcut_disabled">ショートカット無効</string>
+    <string name="links_heading">リンク</string>
+    <string name="dialog_new_title">新しいファイルを作成しますか\?</string>
+    <string name="info_heading">概要</string>
+    <string name="action_save_as">名前を付けて保存</string>
+    <string name="settings_theme_radio3">ブラック</string>
+    <string name="links_text">- プロジェクト: https://github.com/FredHappyface/Android.FHCode
+\n- ライセンス: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
+    <string name="blank_file_text">[これは空ファイルです。既存ファイルを開くか、このファイルを編集して保存してください。]</string>
+    <string name="license_text">Copyright © FredHappyface</string>
+    <string name="dialog_new_confirm">はい</string>
+    <string name="action_open">開く</string>
+    <string name="settings_theme">テーマ</string>
+    <string name="title_activity_settings">FHCode - 設定</string>
+    <string name="shortcut_about">このアプリについて</string>
+    <string name="title_activity_about">FHCode - このアプリについて</string>
+    <string name="settings_text_size">テキストサイズ</string>
+    <string name="features_heading">機能</string>
+    <string name="license_heading">MITライセンス</string>
+    <string name="action_save">保存</string>
+    <string name="settings_theme_radio4">システムに合わせる</string>
+    <string name="dialog_new_cancel">いいえ</string>
+    <string name="action_settings">設定</string>
+    <string name="info_text">Android向けのコードエディタです。</string>
+    <string name="app_name">FHCode</string>
+    <string name="dialog_saved_button">OK</string>
+    <string name="features_text">- コード/テキストファイルの作成、編集および保存
+\n- 正規表現を使用したJava、XML、Pythonのシンタックスハイライト
+\n- 4つのテーマ: ライト、ダーク、ブラック、自動
+\n- テキストサイズの調整
+\n- 設定、アプリ概要、新規ファイル作成のアプリショートカット</string>
+    <string name="shortcut_new_file">新しいファイル</string>
+</resources>

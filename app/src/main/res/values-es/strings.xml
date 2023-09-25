@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="settings_theme_radio2">Oscuro</string>
-    <string name="shortcut_settings">Encuadres</string>
-    <string name="action_new_file">Lima nueva</string>
-    <string name="settings_theme_radio1">Ligero</string>
-    <string name="action_about">Aproximadamente</string>
-    <string name="dialog_saved_title">Salvado!</string>
-    <string name="shortcut_disabled">El atajo Inutilizado</string>
+    <string name="shortcut_settings">Ajustes</string>
+    <string name="action_new_file">Archivo nuevo</string>
+    <string name="settings_theme_radio1">Claro</string>
+    <string name="action_about">Acerca de</string>
+    <string name="dialog_saved_title">¡Guardado!</string>
+    <string name="shortcut_disabled">Acceso directo desactivado</string>
     <string name="links_heading">Enlaces</string>
-    <string name="dialog_new_title">Crea Lima Nueva\?</string>
-    <string name="info_heading">Info</string>
-    <string name="action_save_as">Salva Tan</string>
+    <string name="dialog_new_title">¿Crear un archivo nuevo\?</string>
+    <string name="info_heading">Información</string>
+    <string name="action_save_as">Guardar como</string>
     <string name="settings_theme_radio3">Negro</string>
-    <string name="links_text">- Proyecto: https://github.com/fredhappyface/android.fhcode
-\n- Licencia: https://github.com/fredhappyface/android.fhcode/blob/main/license.md</string>
-    <string name="blank_file_text">[Esto es una lima de espacio , abre una lima o editar esta lima y salvar]</string>
+    <string name="links_text">- Proyecto: https://github.com/FredHappyface/Android.FHCode
+\n- Licencia: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
+    <string name="blank_file_text">[Este es un archivo en blanco, abre un archivo o edita este archivo y guárdalo]</string>
     <string name="license_text">Copyright © FredHappyface</string>
     <string name="dialog_new_confirm">Sí</string>
-    <string name="action_open">Abierto</string>
+    <string name="action_open">Abrir</string>
     <string name="settings_theme">Tema</string>
-    <string name="title_activity_settings">FHCode - Encuadres</string>
-    <string name="shortcut_about">Aproximadamente</string>
-    <string name="title_activity_about">FHCode - Aproximadamente</string>
-    <string name="settings_text_size">Medida de texto</string>
+    <string name="title_activity_settings">Ajustes - FHCode</string>
+    <string name="shortcut_about">Acerca de</string>
+    <string name="title_activity_about">Acerca de - FHCode</string>
+    <string name="settings_text_size">Tamaño del texto</string>
     <string name="features_heading">Características</string>
-    <string name="license_heading">MIT Licencia</string>
-    <string name="action_save">Salva</string>
+    <string name="license_heading">Licencia MIT</string>
+    <string name="action_save">Guardar</string>
     <string name="settings_theme_radio4">Sistema</string>
-    <string name="dialog_new_cancel">Núm</string>
-    <string name="action_settings">Encuadres</string>
-    <string name="info_text">Editor de código para androide.</string>
+    <string name="dialog_new_cancel">No</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="info_text">Editor de código para android.</string>
     <string name="app_name">FHCode</string>
-    <string name="dialog_saved_button">VALE</string>
-    <string name="features_text">- Crear, edita y salvar limas/ de texto del código
-\n- la sintaxis que destaca para Java, XML, la pitón que utiliza regex
-\n- 4 Temas: Ligero, Oscuridad, Negro, Coche
-\n- Configurable medida de texto
-\n- Atajos de Lanzador para Encuadres, Aproximadamente, Lima Nueva</string>
-    <string name="shortcut_new_file">Lima nueva</string>
+    <string name="dialog_saved_button">DE ACUERDO</string>
+    <string name="features_text">- Crear, editar y guardar código/archivos de texto
+\n- Resaltado de sintaxis para Java, XML, Python mediante regex
+\n- 4 temas: Claro, Oscuro, Negro, Auto
+\n- Tamaño del texto configurable
+\n- Accesos directos para Configuración, Acerca de, Nuevo archivo</string>
+    <string name="shortcut_new_file">Archivo nuevo</string>
 </resources>

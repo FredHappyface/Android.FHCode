@@ -1,2 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="settings_theme_radio2">Sombre</string>
+    <string name="shortcut_settings">Paramètres</string>
+    <string name="action_new_file">Nouveau fichier</string>
+    <string name="settings_theme_radio1">Clair</string>
+    <string name="action_about">À propos</string>
+    <string name="dialog_saved_title">Enregistré !</string>
+    <string name="shortcut_disabled">Raccourci désactivé</string>
+    <string name="links_heading">Liens</string>
+    <string name="dialog_new_title">Créer un nouveau fichier \?</string>
+    <string name="info_heading">Informations</string>
+    <string name="action_save_as">Enregistrer sous</string>
+    <string name="settings_theme_radio3">Noir</string>
+    <string name="links_text">- Projet : https://github.com/FredHappyface/Android.FHCode
+\n- Licence : https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
+    <string name="blank_file_text">[Ceci est un fichier vierge, ouvrez un fichier ou éditez celui-ci puis enregistrez]</string>
+    <string name="license_text">Copyright © FredHappyface</string>
+    <string name="dialog_new_confirm">Oui</string>
+    <string name="action_open">Ouvrir</string>
+    <string name="settings_theme">Thème</string>
+    <string name="title_activity_settings">FHCode - Paramètres</string>
+    <string name="shortcut_about">À propos</string>
+    <string name="title_activity_about">FHCode - À propos</string>
+    <string name="settings_text_size">Taille du texte</string>
+    <string name="features_heading">Fonctionnalités</string>
+    <string name="license_heading">Licence MIT</string>
+    <string name="action_save">Enregistrer</string>
+    <string name="settings_theme_radio4">Système</string>
+    <string name="dialog_new_cancel">Non</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="info_text">Éditeur de code pour Android.</string>
+    <string name="app_name">FHCode</string>
+    <string name="dialog_saved_button">OK</string>
+    <string name="features_text">- Créez, modifiez et enregistrer des fichiers texte ou de code
+\n- Coloration syntaxique pour Java, XML, Python à l\'aide d\'expressions régulières
+\n- 4 thèmes : Clair, Sombre, Noir, Système
+\n- Taille du texte configurable
+\n- Raccourcis du lanceur pour Paramètres, À propos, Nouveau fichier</string>
+    <string name="shortcut_new_file">Nouveau fichier</string>
+</resources>

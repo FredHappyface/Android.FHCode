@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings_theme_radio2">Finsternis</string>
-    <string name="shortcut_settings">Lagen</string>
+    <string name="settings_theme_radio2">Dunkel</string>
+    <string name="shortcut_settings">Einstellungen</string>
     <string name="action_new_file">Neue Datei</string>
-    <string name="settings_theme_radio1">Licht</string>
-    <string name="action_about">Etwa</string>
+    <string name="settings_theme_radio1">Hell</string>
+    <string name="action_about">Über</string>
     <string name="dialog_saved_title">Gespeichert!</string>
-    <string name="shortcut_disabled">Abkürzung Schaltete aus</string>
-    <string name="links_heading">Bänder</string>
-    <string name="dialog_new_title">Schaff Neue Datei\?</string>
+    <string name="shortcut_disabled"></string>
+    <string name="links_heading">Links</string>
+    <string name="dialog_new_title">Neue Datei erstellen\?</string>
     <string name="info_heading">Info</string>
-    <string name="action_save_as">Speicher Da</string>
+    <string name="action_save_as">Speichern als</string>
     <string name="settings_theme_radio3">Schwarz</string>
-    <string name="links_text">- Projekt: Https://github.com/FredHappyface/Androide.FHCode
-\n- Schein: Https://github.com/FredHappyface/Androide.FHCode/blob/Hauptsächlicher/SCHEIN.md</string>
-    <string name="blank_file_text">[Dies ist eine Lücke Datei, offen eine Datei oder Bearbeitung diese Datei und speichert]</string>
+    <string name="links_text">- Projekt: https://github.com/FredHappyface/Android.FHCode
+\n- Lizenz: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
+    <string name="blank_file_text">[Dies ist eine leere Datei, öffnen Sie eine Datei oder bearbeiten Sie diese Datei und speichern Sie sie]</string>
     <string name="license_text">Copyright © FredHappyface</string>
     <string name="dialog_new_confirm">Ja</string>
-    <string name="action_open">Offen</string>
+    <string name="action_open">Öffnen</string>
     <string name="settings_theme">Thema</string>
-    <string name="title_activity_settings">FHCode - Lagen</string>
-    <string name="shortcut_about">Etwa</string>
-    <string name="title_activity_about">FHCode - Etwa</string>
-    <string name="settings_text_size">Text Größe</string>
-    <string name="features_heading">Charakterzüge</string>
-    <string name="license_heading">MIT Schein</string>
-    <string name="action_save">Speicher</string>
+    <string name="title_activity_settings">FHCode - Einstellungen</string>
+    <string name="shortcut_about">Über</string>
+    <string name="title_activity_about">FHCode - Über</string>
+    <string name="settings_text_size">Textgröße</string>
+    <string name="features_heading">Funktionen</string>
+    <string name="license_heading">MIT-Lizenz</string>
+    <string name="action_save">Speichern</string>
     <string name="settings_theme_radio4">System</string>
-    <string name="dialog_new_cancel">#Nr</string>
-    <string name="action_settings">Lagen</string>
-    <string name="info_text">Code Chefredakteur für Androide.</string>
+    <string name="dialog_new_cancel">Nein</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="info_text">Code-Editor für Android.</string>
     <string name="app_name">FHCode</string>
     <string name="dialog_saved_button">OK</string>
     <string name="features_text">- Schaffen, bearbeite und speichert Code/ Text Dateien

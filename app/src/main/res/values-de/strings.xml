@@ -37,4 +37,5 @@
 \n- Konfigurierbare Text Größe
 \n- #Abschussgerät Abkürzungen für Lagen, Etwa, Neue Datei</string>
     <string name="shortcut_new_file">Neue Datei</string>
+    <string name="shortcut_disabled">Abkürzung Schaltete aus</string>
 </resources>

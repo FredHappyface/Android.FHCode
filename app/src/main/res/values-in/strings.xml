@@ -1,2 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="settings_theme_radio2">Login</string>
+    <string name="shortcut_settings">Login</string>
+    <string name="action_new_file">File Baru</string>
+    <string name="settings_theme_radio1">Login</string>
+    <string name="action_about">Sitemap</string>
+    <string name="dialog_saved_title">Sitemap!</string>
+    <string name="shortcut_disabled">Sitemap</string>
+    <string name="links_heading">Login</string>
+    <string name="dialog_new_title">Buat File Baru?</string>
+    <string name="info_heading">Sitemap</string>
+    <string name="action_save_as">Sitemap</string>
+    <string name="settings_theme_radio3">Login</string>
+    <string name="links_text">- Proyek: https://github.com/FredHappyface/Android.FHCode
+\n- Lisensi: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
+    <string name="blank_file_text">[Ini adalah file kosong, buka file atau edit file ini dan simpan]</string>
+    <string name="license_text">Sitemap _ FredHappyface</string>
+    <string name="dialog_new_confirm">Login</string>
+    <string name="action_open">Login</string>
+    <string name="settings_theme">Login</string>
+    <string name="title_activity_settings">Login</string>
+    <string name="shortcut_about">Sitemap</string>
+    <string name="title_activity_about">Login</string>
+    <string name="settings_text_size">Ukuran Teks</string>
+    <string name="features_heading">Sitemap</string>
+    <string name="license_heading">Login Login</string>
+    <string name="action_save">Sitemap</string>
+    <string name="settings_theme_radio4">Login</string>
+    <string name="dialog_new_cancel">Sitemap</string>
+    <string name="action_settings">Login</string>
+    <string name="info_text">Code editor untuk android.</string>
+    <string name="app_name">Login</string>
+    <string name="dialog_saved_button">LOGIN</string>
+    <string name="features_text">- Buat, edit dan simpan file kode / teks
+\n- Syntax sorotan untuk Java, XML, Python menggunakan regex
+\n- 4 Tema: Cahaya, Gelap, Hitam, Auto
+\n- Ukuran teks yang dapat dikonfigurasi
+\n- Launcher Shortcuts untuk Pengaturan, Tentang, File Baru</string>
+    <string name="shortcut_new_file">File Baru</string>
+</resources>

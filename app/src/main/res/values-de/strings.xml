@@ -31,11 +31,11 @@
     <string name="info_text">Code-Editor für Android.</string>
     <string name="app_name">FHCode</string>
     <string name="dialog_saved_button">OK</string>
-    <string name="features_text">- Schaffen, bearbeite und speichert Code/ Text Dateien
-\n- Syntax markieren für #Java, #XML, Python benutzend regex
-\n- 4 Themen: Hell, Dunkel, Schwarz, #Auto
-\n- Konfigurierbare Text Größe
-\n- #Abschussgerät Abkürzungen für Lagen, Etwa, Neue Datei</string>
+    <string name="features_text">- Code/ Textdateien erstellen, bearbeiten und speichern
+\n- Syntax-Highlighting für Java, XML, Python mit Regex
+\n- 4 Themen: Licht, Dunkel, Schwarz, Auto
+\n- Konfigurierbare Textgröße
+\n- Starter Shortcuts für Einstellungen, Über, Neue Datei</string>
     <string name="shortcut_new_file">Neue Datei</string>
-    <string name="shortcut_disabled">Abkürzung Schaltete aus</string>
+    <string name="shortcut_disabled">Shortcut deaktiviert</string>
 </resources>

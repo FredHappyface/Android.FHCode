@@ -1,2 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="settings_theme_radio2">الظلام</string>
+    <string name="shortcut_settings">الترتيبات</string>
+    <string name="action_new_file">جديدة</string>
+    <string name="settings_theme_radio1">الضوء</string>
+    <string name="action_about">بشأن</string>
+    <string name="dialog_saved_title">أنقذوا!</string>
+    <string name="shortcut_disabled">الإعاقة القصيرة</string>
+    <string name="dialog_new_title">أصنع ملف جديد؟?</string>
+    <string name="action_save_as">إنقاذ</string>
+    <string name="settings_theme_radio3">أسود</string>
+    <string name="links_text">المشروع: https://github.com/FredHappyface/ Android.FHCode
+\n- License: https://github.com/FredHappyface/ Android.FHCode/blob/main/LICENSE.md</string>
+    <string name="blank_file_text">[هذا ملف فارغ، فتح ملف أو تحرير هذا الملف وإنقاذ]</string>
+    <string name="license_text">حقوق التأليف والنشر</string>
+    <string name="dialog_new_confirm">نعم</string>
+    <string name="action_open">مفتوح</string>
+    <string name="settings_theme">الموضوع</string>
+    <string name="title_activity_settings">FHCode - Settings</string>
+    <string name="shortcut_about">بشأن</string>
+    <string name="title_activity_about">(فيكود)</string>
+    <string name="settings_text_size">حجم النص</string>
+    <string name="features_heading">المعالم</string>
+    <string name="license_heading">MIT الرخصة</string>
+    <string name="action_save">أنقذ</string>
+    <string name="settings_theme_radio4">النظام</string>
+    <string name="dialog_new_cancel">لا</string>
+    <string name="action_settings">الترتيبات</string>
+    <string name="info_text">محررة الكويكب.</string>
+    <string name="app_name">FHCode</string>
+    <string name="dialog_saved_button">حسنا</string>
+    <string name="features_text">- الإنشاء والتحرير وتوفير الملفات الرمزية/النصية
+\n(سينتاكس) يسلط الضوء على (جافا)، (إكس إم إل)، (بيثون)
+\n- 4 Themes: Light, Dark, Black, Auto
+\n- حجم النص القابل للتداول
+\n-أقصى طرق الإطلاق لـ (ستينغز)، حول، (نيو فيل)</string>
+    <string name="shortcut_new_file">جديدة</string>
+</resources>

@@ -36,4 +36,6 @@
 \n- حجم النص القابل للتداول
 \n-أقصى طرق الإطلاق لـ (ستينغز)، حول، (نيو فيل)</string>
     <string name="shortcut_new_file">جديدة</string>
+    <string name="links_heading">الروابط</string>
+    <string name="info_heading">المعلومات</string>
 </resources>

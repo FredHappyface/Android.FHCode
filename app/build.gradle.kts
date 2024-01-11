@@ -32,13 +32,13 @@ tasks.register("genDocs") {
 }
 
 android {
-	compileSdk = 33
+	compileSdk = 34
 	buildToolsVersion = "34.0.0"
 
 	defaultConfig {
 		applicationId = "com.fredhappyface.fhcode"
 		minSdk = 26
-		targetSdk = 33
+		targetSdk = 34
 		versionCode = 20230828
 		versionName = "20230828"
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -70,6 +70,7 @@ dependencies {
 	implementation("androidx.appcompat:appcompat:1.6.1")
 	implementation("com.google.android.material:material:1.11.0")
 	implementation("androidx.preference:preference-ktx:1.2.1")
+	implementation("me.zhanghai.android.fastscroll:library:1.3.0")
 	testImplementation("junit:junit:4.13.2")
 	testImplementation("androidx.test.ext:junit:1.1.5")
 	testImplementation("androidx.test.espresso:espresso-core:3.5.1")

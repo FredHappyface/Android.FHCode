@@ -8,11 +8,27 @@ import android.provider.OpenableColumns
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.MotionEvent
+import android.view.View
 import android.webkit.MimeTypeMap
 import android.widget.EditText
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AlertDialog
+import androidx.core.widget.NestedScrollView
 import androidx.preference.PreferenceManager
+import com.fredhappyface.fhcode.languagerules.CPP
+import com.fredhappyface.fhcode.languagerules.CSharp
+import com.fredhappyface.fhcode.languagerules.Go
+import com.fredhappyface.fhcode.languagerules.JSON
+import com.fredhappyface.fhcode.languagerules.LanguageRules
+import com.fredhappyface.fhcode.languagerules.Java
+import com.fredhappyface.fhcode.languagerules.TSJS
+import com.fredhappyface.fhcode.languagerules.PHP
+import com.fredhappyface.fhcode.languagerules.Python
+import com.fredhappyface.fhcode.languagerules.Ruby
+import com.fredhappyface.fhcode.languagerules.Swift
+import com.fredhappyface.fhcode.languagerules.XML
 import java.io.BufferedReader
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
@@ -43,6 +59,7 @@ class ActivityMain : ActivityThemable() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
+
 		// Get saved state
 		this.uri = savedInstanceState?.getString("_uri", null)
 		this.languageID = savedInstanceState?.getString("_languageID", "java").toString()
@@ -52,23 +69,37 @@ class ActivityMain : ActivityThemable() {
 			colours = ColoursLight()
 		}
 		// Set up correct language
-		var languageRules: LanguageRules = LanguageRulesJava()
+		var languageRules: LanguageRules = Java()
 		when (this.languageID) {
-			"py" -> languageRules = LanguageRulesPython()
-			"xml" -> languageRules = LanguageRulesXML()
+			"cpp", "c", "h", "hpp" -> languageRules = CPP()
+			"csharp", "cs" -> languageRules = CSharp()
+			"go" -> languageRules = Go()
+			"java" -> languageRules = Java()
+			"json", "jsonc" -> languageRules = JSON()
+			"php", "php3", "php4", "php5", "phtml" -> languageRules = PHP()
+			"py", "pyc", "pyo" -> languageRules = Python()
+			"rb" -> languageRules = Ruby()
+			"swift" -> languageRules = Swift()
+			"ts", "js" -> languageRules = TSJS()
+			"xml", "xsd", "xsl" -> languageRules = XML()
 		}
-		// Set up code edit, apply highlighting and some startup text
+
+
 		val codeEditText: EditText = findViewById(R.id.codeHighlight)
+		val lineNumbersTextView: TextView = findViewById(R.id.lineNumbersTextView)
 		val textHighlight = TextHighlight(
 			codeEditText,
+			lineNumbersTextView,
 			languageRules,
 			colours
 		)
 		textHighlight.start()
 		codeEditText.setText(R.string.blank_file_text)
+
 		// Apply text size
 		this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
 		this.currentTextSize = this.sharedPreferences.getInt("text", 18)
+		lineNumbersTextView.textSize = this.currentTextSize.toFloat()
 		codeEditText.textSize = this.currentTextSize.toFloat()
 	}
 
@@ -312,7 +343,7 @@ class ActivityMain : ActivityThemable() {
 			val sizeIdx = cursor?.getColumnIndex(OpenableColumns.SIZE)
 			cursor?.moveToFirst()
 			val size = sizeIdx?.let { cursor.getLong(it) }
-			if (size ?: 0 > MAX_FILE_SIZE) {
+			if ((size ?: 0) > MAX_FILE_SIZE) {
 				return "File too large! (over $MAX_FILE_SIZE bytes)\n"
 			}
 		}

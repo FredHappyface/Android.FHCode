@@ -1,46 +1,48 @@
-package com.fredhappyface.fhcode
+package com.fredhappyface.fhcode.languagerules
 
 /**
- * LanguageRulesJava implements interface LanguageRules
+ * LanguageRulesGo implements interface LanguageRules
  */
-class LanguageRulesJava : LanguageRules {
+class Go : LanguageRules {
 	override fun matchConstants(string: CharSequence): List<RuleMatch> {
-		val match: Regex = "final(?=\\s)".toRegex()
+		// Match Go constants (e.g., numbers, strings)
+		val match = """\b(?:\d*\.\d+|\d+)(?:[eE][+-]?\d+)?\b|(["'])(?:(?!\1).|\\\1)*\1""".toRegex()
 		return match.findAll(string).map {
 			RuleMatch("constant", it.range.first, it.range.last + 1)
 		}.toList()
 	}
 
 	override fun matchImports(string: CharSequence): List<RuleMatch> {
-		val match: Regex = "import(?=\\s)".toRegex()
+		// Match Go import statements
+		val match = """\bimport\s*\(\s*[^)]*\s*\)""".toRegex()
 		return match.findAll(string).map {
 			RuleMatch("import", it.range.first, it.range.last + 1)
 		}.toList()
 	}
 
 	override fun matchAnnotations(string: CharSequence): List<RuleMatch> {
-		val match: Regex = "@\\S+(\\(.*?\\))?".toRegex()
-		return match.findAll(string).map {
-			RuleMatch("annotation", it.range.first, it.range.last + 1)
-		}.toList()
+		return emptyList()
 	}
 
 	override fun matchComments(string: CharSequence): List<RuleMatch> {
-		val match: Regex = "//.*|(\"(?:\\\\[^\"]|\\\\\"|.)*?\")|(?s)/\\*.*?\\*/".toRegex()
+		// Match Go single-line and multi-line comments
+		val match = """\/\/.*|\/\*[\s\S]*?\*\/""".toRegex()
 		return match.findAll(string).map {
 			RuleMatch("comment", it.range.first, it.range.last + 1)
 		}.toList()
 	}
 
 	override fun matchClasses(string: CharSequence): List<RuleMatch> {
-		val match: Regex = "class(?=\\s)".toRegex()
+		// Match Go type and struct declarations
+		val match = """\b(?:type|struct)\s+[A-Za-z_][A-Za-z_\d]*""".toRegex()
 		return match.findAll(string).map {
 			RuleMatch("class", it.range.first, it.range.last + 1)
 		}.toList()
 	}
 
 	override fun matchKeywords(string: CharSequence): List<RuleMatch> {
-		val match: Regex = "(void|boolean|int|float|double)(?=\\s)".toRegex()
+		// Match common Go keywords
+		val match = """\b(?:func|var|const|if|else|for|switch|case|break|continue|return|defer|panic|recover)\b""".toRegex()
 		return match.findAll(string).map {
 			RuleMatch("keyword", it.range.first, it.range.last + 1)
 		}.toList()

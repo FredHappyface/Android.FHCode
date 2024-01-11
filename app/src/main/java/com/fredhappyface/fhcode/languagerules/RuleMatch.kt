@@ -1,4 +1,4 @@
-package com.fredhappyface.fhcode
+package com.fredhappyface.fhcode.languagerules
 
 /**
  * Rule match representation

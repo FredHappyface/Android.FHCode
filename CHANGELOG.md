@@ -3,9 +3,24 @@
 All major and minor version changes will be documented in this file. Details of
 patch-level version changes can be found in [commit messages](../../commits/master).
 
-<!--
 ## Next_Ver - 2023/xx/xx
--->
+
+- Update dependencies
+- Add new languages:
+	- c/c++
+	- c#
+	- go/golang
+	- json
+	- php
+	- ruby
+	- swift
+	- ts/js
+- Add line numbers
+
+Note - Known bugs are:
+
+- alignment issues for edittext and line numbers
+- language support hasn't been thoroughly tested
 
 ## 20230820 - 2023/08/20
 

@@ -1,4 +1,4 @@
-package com.fredhappyface.fhcode
+package com.fredhappyface.fhcode.languagerules
 
 /**
  * interface LanguageRules implemented by LanguageRulesJava, LanguageRulesPython, LanguageRulesXML, ...

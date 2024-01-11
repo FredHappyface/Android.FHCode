@@ -1,26 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:theme="@style/AppTheme"
-	tools:context=".ActivityMain">
+	android:layout_height="match_parent">
 
-	<EditText
-		android:id="@+id/codeHighlight"
-		style="@style/body_text"
-		android:layout_width="0dp"
-		android:layout_height="0dp"
-		android:background="@color/transparent"
-		android:ems="10"
-		android:gravity="top|start"
-		android:importantForAutofill="no"
-		android:inputType=""
-		android:text=""
-		app:layout_constraintBottom_toBottomOf="parent"
-		app:layout_constraintEnd_toEndOf="parent"
-		app:layout_constraintStart_toStartOf="parent"
-		app:layout_constraintTop_toTopOf="parent"
-		tools:ignore="LabelFor" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+	<me.zhanghai.android.fastscroll.FastScrollNestedScrollView
+		android:id="@+id/nestedScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="vertical"
+		android:scrollbarAlwaysDrawVerticalTrack="true"
+		android:scrollbarSize="8dp"
+		android:scrollbarThumbVertical="?attr/foregroundColorSecondary"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+	<!-- LinearLayout to contain line numbers and code -->
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal"
+		android:layout_margin="0dp"
+		android:padding="0dp">
+
+		<!-- Line numbers -->
+		<TextView
+			android:id="@+id/lineNumbersTextView"
+			android:layout_margin="0dp"
+			android:paddingHorizontal="4dp"
+			android:paddingTop="16dp"
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:background="?attr/backgroundColorSecondary"
+			/>
+
+		<!-- Code EditText -->
+		<EditText
+			android:id="@+id/codeHighlight"
+			android:layout_margin="0dp"
+			android:padding="4dp"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:background="@color/transparent"
+
+			/>
+	</LinearLayout>
+	</me.zhanghai.android.fastscroll.FastScrollNestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

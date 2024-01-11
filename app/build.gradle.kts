@@ -64,11 +64,11 @@ android {
 }
 
 dependencies {
-	dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.8.20")
-	implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
-	implementation("androidx.core:core-ktx:1.10.1")
+	dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.9.10")
+	implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
+	implementation("androidx.core:core-ktx:1.12.0")
 	implementation("androidx.appcompat:appcompat:1.6.1")
-	implementation("com.google.android.material:material:1.9.0")
+	implementation("com.google.android.material:material:1.11.0")
 	implementation("androidx.preference:preference-ktx:1.2.1")
 	testImplementation("junit:junit:4.13.2")
 	testImplementation("androidx.test.ext:junit:1.1.5")

@@ -27,7 +27,7 @@
     <string name="license_heading">麻省理工学院 执照</string>
     <string name="action_save">Save</string>
     <string name="settings_theme_radio4">系统</string>
-    <string name="dialog_new_cancel">Save</string>
+    <string name="dialog_new_cancel">无</string>
     <string name="action_settings">背景</string>
     <string name="info_text">Code编.</string>
     <string name="app_name">FHCode</string>

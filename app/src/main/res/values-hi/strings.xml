@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings_theme_radio2">अंधेरा</string>
+    <string name="settings_theme_radio2">गहरी</string>
     <string name="shortcut_settings">सेटिंग्स</string>
     <string name="action_new_file">नई फाइल</string>
-    <string name="settings_theme_radio1">प्रकाश</string>
-    <string name="action_about">के बारे में</string>
-    <string name="dialog_saved_title">बचाओ!</string>
+    <string name="settings_theme_radio1">हल्की</string>
+    <string name="action_about">बारे में</string>
+    <string name="dialog_saved_title">सहेजा गया!</string>
     <string name="shortcut_disabled">शॉर्टकट अक्षम</string>
     <string name="links_heading">लिंक</string>
     <string name="dialog_new_title">नई फ़ाइल बनाएँ?</string>
-    <string name="action_save_as">सहेजें</string>
-    <string name="settings_theme_radio3">काला</string>
+    <string name="action_save_as">ऐसे सहेजें</string>
+    <string name="settings_theme_radio3">काली</string>
     <string name="links_text">- परियोजना: https://github.com/FredHappyface/Android.FHCode
 \n- लाइसेंस: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
     <string name="blank_file_text">[यह एक रिक्त फ़ाइल है, एक फ़ाइल खोलें या इस फ़ाइल को संपादित करें और सहेजें]</string>
-    <string name="license_text">फ्रेडहैप्पीफेस</string>
+    <string name="license_text">कॉपीराइट © फ्रेडहैप्पीफेस</string>
     <string name="dialog_new_confirm">हाँ</string>
-    <string name="action_open">खुला</string>
-    <string name="settings_theme">विषय</string>
+    <string name="action_open">खोलें</string>
+    <string name="settings_theme">थीम</string>
     <string name="title_activity_settings">FHCode - सेटिंग्स</string>
-    <string name="shortcut_about">के बारे में</string>
-    <string name="title_activity_about">FHCode</string>
-    <string name="settings_text_size">पाठ का आकार</string>
-    <string name="features_heading">सुविधाएँ</string>
-    <string name="license_heading">एमआईटी लाइसेंस</string>
+    <string name="shortcut_about">बारे में</string>
+    <string name="title_activity_about">FHCode - के बारे में</string>
+    <string name="settings_text_size">टेक्स्ट का साइज़</string>
+    <string name="features_heading">विशेषताएं</string>
+    <string name="license_heading">MIT लाइसेंस</string>
     <string name="action_save">सहेजें</string>
-    <string name="settings_theme_radio4">प्रणाली</string>
+    <string name="settings_theme_radio4">सिस्टम</string>
     <string name="dialog_new_cancel">नहीं</string>
     <string name="action_settings">सेटिंग्स</string>
-    <string name="info_text">एंड्रॉइड के लिए कोड एडिटर।।</string>
+    <string name="info_text">Android के लिए कोड संपादक।</string>
     <string name="app_name">FHCode</string>
-    <string name="dialog_saved_button">ठीक</string>
-    <string name="features_text">- कोड / टेक्स्ट फ़ाइलों को बनाएं, संपादित करें और सहेजें
-\n- जावा, XML, पायथन के लिए सिंटैक्स हाइलाइटिंग रेगेक्स का उपयोग करके
-\n4 थीम्स: लाइट, डार्क, ब्लैक, ऑटो
+    <string name="dialog_saved_button">ठीक है</string>
+    <string name="features_text">- कोड/टेक्स्ट फ़ाइलें बनाएं, संपादित करें और सहेजें
+\n- Regex का उपयोग करके Java, XML, Python के लिए सिंटेक्स हाइलाइटिंग
+\n- 4 थीम्स: हल्की, गहरी, काली, ऑटो
 \n- विन्यास योग्य टेक्स्ट आकार
-\n- सेटिंग्स के लिए लॉन्चर शॉर्टकट, के बारे में, नई फ़ाइल</string>
+\n- सेटिंग्स, बारे में, नई फ़ाइल के लिए लॉन्चर शॉर्टकट</string>
     <string name="shortcut_new_file">नई फाइल</string>
     <string name="info_heading">जानकारी</string>
 </resources>

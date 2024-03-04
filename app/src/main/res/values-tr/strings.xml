@@ -36,6 +36,6 @@
 \n- Configurable text büyüklüğü
 \n- Ayarlar için kısaltmalar, Yeni Dosya</string>
     <string name="shortcut_new_file">Yeni Dosya</string>
-    <string name="action_about">About</string>
-    <string name="shortcut_about">About</string>
+    <string name="action_about">FHCode - Ayarlar</string>
+    <string name="shortcut_about">FHCode - Ayarlar</string>
 </resources>

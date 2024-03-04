@@ -4,7 +4,7 @@
     <string name="shortcut_settings">Login</string>
     <string name="action_new_file">File Baru</string>
     <string name="settings_theme_radio1">Login</string>
-    <string name="action_about">Sitemap</string>
+    <string name="action_about">Login</string>
     <string name="dialog_saved_title">Sitemap!</string>
     <string name="shortcut_disabled">Sitemap</string>
     <string name="links_heading">Login</string>
@@ -20,7 +20,7 @@
     <string name="action_open">Login</string>
     <string name="settings_theme">Login</string>
     <string name="title_activity_settings">Login</string>
-    <string name="shortcut_about">Sitemap</string>
+    <string name="shortcut_about">Login</string>
     <string name="title_activity_about">Login</string>
     <string name="settings_text_size">Ukuran Teks</string>
     <string name="features_heading">Sitemap</string>

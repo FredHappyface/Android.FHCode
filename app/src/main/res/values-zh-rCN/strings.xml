@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings_theme_radio2">页: 1</string>
-    <string name="shortcut_settings">背景</string>
+    <string name="settings_theme_radio2">深色</string>
+    <string name="shortcut_settings">设置</string>
     <string name="action_new_file">新文件</string>
-    <string name="settings_theme_radio1">灯光</string>
-    <string name="action_about">FHCode——环境</string>
-    <string name="dialog_saved_title">Saved!</string>
-    <string name="shortcut_disabled">短期残疾人</string>
+    <string name="settings_theme_radio1">浅色</string>
+    <string name="action_about">关于</string>
+    <string name="dialog_saved_title">已保存！</string>
+    <string name="shortcut_disabled">快捷方式已禁用</string>
     <string name="links_heading">链接</string>
-    <string name="dialog_new_title">创建新的档案?</string>
+    <string name="dialog_new_title">创建新文件吗？</string>
     <string name="info_heading">信息</string>
-    <string name="action_save_as">Save As</string>
-    <string name="settings_theme_radio3">黑人</string>
-    <string name="links_text">- 项目:https://github.com/FredHappyface/Android.FHCode
-\n- License: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
-    <string name="blank_file_text">[这是一个空白档案,打开档案或编辑档案,并储蓄]</string>
-    <string name="license_text">版权 ©</string>
-    <string name="dialog_new_confirm">否</string>
-    <string name="action_open">开放</string>
+    <string name="action_save_as">另存为</string>
+    <string name="settings_theme_radio3">黑色</string>
+    <string name="links_text">- 项目：https://github.com/FredHappyface/Android.FHCode
+\n- 许可证：https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
+    <string name="blank_file_text">[这是一个空文件，打开文件，或者编辑文件并保存]</string>
+    <string name="license_text">版权所有 © FredHappyface</string>
+    <string name="dialog_new_confirm">是</string>
+    <string name="action_open">打开</string>
     <string name="settings_theme">主题</string>
-    <string name="title_activity_settings">FHCode——环境</string>
-    <string name="shortcut_about">FHCode——环境</string>
-    <string name="title_activity_about">FHCode - About</string>
-    <string name="settings_text_size">文本</string>
-    <string name="features_heading">特点</string>
-    <string name="license_heading">麻省理工学院 执照</string>
-    <string name="action_save">Save</string>
-    <string name="settings_theme_radio4">系统</string>
-    <string name="dialog_new_cancel">Save</string>
-    <string name="action_settings">背景</string>
-    <string name="info_text">Code编.</string>
+    <string name="title_activity_settings">FHCode - 设置</string>
+    <string name="shortcut_about">关于</string>
+    <string name="title_activity_about">FHCode - 关于</string>
+    <string name="settings_text_size">文本大小</string>
+    <string name="features_heading">功能</string>
+    <string name="license_heading">MIT 许可证</string>
+    <string name="action_save">保存</string>
+    <string name="settings_theme_radio4">跟随系统</string>
+    <string name="dialog_new_cancel">否</string>
+    <string name="action_settings">设置</string>
+    <string name="info_text">Android 的代码编辑器。</string>
     <string name="app_name">FHCode</string>
-    <string name="dialog_saved_button">OK</string>
-    <string name="features_text">"- 建立、编辑和保存法典/文本档案
-\n-  Syn、 X、 X、 Python、 Python
-\n- 4 Themes: Light, Dar, Black, Auto
-\n- 可没收的文本尺寸
-\n- 《新文件》的发射器短片"</string>
+    <string name="dialog_saved_button">好的</string>
+    <string name="features_text">- 建立、编辑并保存代码/文本文件
+\n- 使用正则表达式对 Java、XML 与 Python 的语法高亮
+\n- 4 种主题：浅色、深色、黑色、自动
+\n- 可配置文本大小
+\n- “设置”“关于”“新文件”的启动器快捷方式</string>
     <string name="shortcut_new_file">新文件</string>
 </resources>

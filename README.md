@@ -1,4 +1,39 @@
 
+========================= No Longer Supported =========================
+
+**This project has reached the end of development and is no longer
+supported**
+
+## What this means now
+
+- The repository, issues, pull requests, labels, milestones, projects, wiki,
+releases, commits, tags, branches, reactions and comments are read-only.
+- The repository can still be forked and cloned - The License still applies.
+
+## What this means in the future
+
+- The repository is scheduled for deletion (the earliest date for this is
+[delete])
+- The repository may be un-archived (however, this is very unlikely)
+
+## Are there better editors?
+
+Absolutely, there are several alternatives out there.
+
+While I've dedicated considerable time and effort to this project, recently I've found myself drawn to other projects that I find more fulfilling. If you're looking for alternatives, a quick search reveals a variety of text editors available for Android. Here's a selection:
+
+1. Acode: [https://github.com/deadlyjack/Acode](https://github.com/deadlyjack/Acode)
+
+2. Turbo Editor: [https://github.com/vmihalachi/turbo-editor](https://github.com/vmihalachi/turbo-editor)
+
+3. Markor: [https://github.com/gsantner/markor](https://github.com/gsantner/markor)
+
+4. Editor: [https://github.com/billthefarmer/editor](https://github.com/billthefarmer/editor)
+
+https://alternativeto.net/category/developer-tools/code-editor/?license=opensource&platform=android seems to have a few that may be worth investigating
+
+========================= No Longer Supported =========================
+
 <img src="metadata/en-US/images/featureGraphic.png" alt="Feature Graphic" width="">
 
 [![GitHub top language](https://img.shields.io/github/languages/top/FredHappyface/Android.FHCode.svg?style=for-the-badge&cacheSeconds=28800)](../../)
@@ -13,7 +48,9 @@
 
 Code editor for android
 
-
+- [What this means now](#what-this-means-now)
+- [What this means in the future](#what-this-means-in-the-future)
+- [Are there better editors?](#are-there-better-editors)
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Documentation](#documentation)
@@ -80,7 +117,6 @@ preferred store by clicking on one of the badges below, then download/install:
 [<img src="readme-assets/badges/badge_fdroid.png" alt="Get it on F-Droid" height="80">](https://f-droid.org/en/packages/com.fredhappyface.fhcode/)
 [<img src="readme-assets/badges/badge_gplay.png" alt="Get it on Google Play" height="80">](https://play.google.com/store/apps/details?id=com.fredhappyface.fhcode)
 [<img src="readme-assets/badges/badge_github.png" alt="Get it on GitHub" height="80">](../../releases)
-
 
 <!-- omit in toc -->
 ### Build from Source

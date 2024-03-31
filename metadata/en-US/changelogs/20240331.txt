@@ -1,0 +1,21 @@
+<h2 id="section">20240331 - 2024/03/31</h2>
+<ul>
+<li>Update dependencies</li>
+<li>Add new languages:
+<ul>
+<li>c/c++</li>
+<li>c#</li>
+<li>go/golang</li>
+<li>json</li>
+<li>php</li>
+<li>ruby</li>
+<li>swift</li>
+<li>ts/js</li>
+</ul></li>
+<li>Add line numbers</li>
+</ul>
+<p>Note - Known bugs are:</p>
+<ul>
+<li>alignment issues for edittext and line numbers</li>
+<li>language support hasn’t been thoroughly tested</li>
+</ul>

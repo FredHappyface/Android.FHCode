@@ -3,7 +3,7 @@
 All major and minor version changes will be documented in this file. Details of
 patch-level version changes can be found in [commit messages](../../commits/master).
 
-## Next_Ver - 2023/xx/xx
+## 20240331 - 2024/03/31
 
 - Update dependencies
 - Add new languages:

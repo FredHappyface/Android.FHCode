@@ -1,4 +1,4 @@
-<h2 id="section">20240401 - 2024/03/31</h2>
+<h2 id="section">20240331 - 2024/03/31</h2>
 <ul>
 <li>Update dependencies</li>
 <li>Add new languages:

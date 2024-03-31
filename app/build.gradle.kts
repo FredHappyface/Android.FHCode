@@ -49,8 +49,8 @@ android {
 		applicationId = "com.fredhappyface.fhcode"
 		minSdk = 26
 		targetSdk = 34
-		versionCode = 20240331
-		versionName = "20240331"
+		versionCode = 20240401
+		versionName = "20240401"
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 		setProperty("archivesBaseName", "$applicationId-$versionName")
 	}

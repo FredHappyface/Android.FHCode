@@ -24,23 +24,33 @@ tasks.register("genDocs") {
 	dependsOn("dokkaGfm")
 	doLast {
 		copy {
-			from("$ref/index.md")
-			into(ref)
+			from("${ref.get()}/index.md")
+			into(ref.get())
 			rename { "README.md" }
 		}
 	}
 }
 
+
 android {
 	compileSdk = 34
 	buildToolsVersion = "34.0.0"
+	namespace = "com.fredhappyface.fhcode"
+
+	kotlinOptions {
+		jvmTarget = "17"
+	}
+
+	androidResources {
+		generateLocaleConfig = true
+	}
 
 	defaultConfig {
 		applicationId = "com.fredhappyface.fhcode"
 		minSdk = 26
 		targetSdk = 34
-		versionCode = 20230828
-		versionName = "20230828"
+		versionCode = 20240322
+		versionName = "20240322"
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 		setProperty("archivesBaseName", "$applicationId-$versionName")
 	}
@@ -48,7 +58,6 @@ android {
 	buildTypes {
 		getByName("debug") { versionNameSuffix = "-debug" }
 		getByName("release") {
-			// versionNameSuffix = "-release"
 			proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
 			isMinifyEnabled = false
 		}
@@ -58,36 +67,24 @@ android {
 		sourceCompatibility(JavaVersion.VERSION_17)
 		targetCompatibility(JavaVersion.VERSION_17)
 	}
-
-	kotlinOptions { jvmTarget = "17" }
-	namespace = "com.fredhappyface.fhcode"
 }
 
 dependencies {
-	dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.9.10")
-	implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.22")
+	dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.9.20")
+	implementation("org.jetbrains.kotlin:kotlin-stdlib:1.9.23")
 	implementation("androidx.core:core-ktx:1.12.0")
 	implementation("androidx.appcompat:appcompat:1.6.1")
 	implementation("com.google.android.material:material:1.11.0")
 	implementation("androidx.preference:preference-ktx:1.2.1")
 	implementation("me.zhanghai.android.fastscroll:library:1.3.0")
-	testImplementation("junit:junit:4.13.2")
-	testImplementation("androidx.test.ext:junit:1.1.5")
-	testImplementation("androidx.test.espresso:espresso-core:3.5.1")
+	androidTestImplementation("junit:junit:4.13.2")
+	androidTestImplementation("androidx.test:core:1.5.0")
+	androidTestImplementation("androidx.test.ext:junit:1.1.5")
+	androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-ktlint {
+configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+	version.set("0.50.0")
 	android.set(true)
 	coloredOutput.set(false)
-	enableExperimentalRules.set(true)
-	disabledRules.set(
-		setOf(
-			"indent",
-			"parameter-list-wrapping",
-			"experimental:argument-list-wrapping"
-		)
-	)
-	reporters {
-		reporter(org.jlleitschuh.gradle.ktlint.reporter.ReporterType.PLAIN)
-	}
 }

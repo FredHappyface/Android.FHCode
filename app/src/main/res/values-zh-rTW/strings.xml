@@ -4,7 +4,7 @@
     <string name="shortcut_settings">背景</string>
     <string name="action_new_file">新文件</string>
     <string name="settings_theme_radio1">灯光</string>
-    <string name="action_about">FHCode——环境</string>
+    <string name="action_about">约 旦</string>
     <string name="dialog_saved_title">Saved!</string>
     <string name="shortcut_disabled">短期残疾人</string>
     <string name="links_heading">链接</string>
@@ -20,7 +20,7 @@
     <string name="action_open">开放</string>
     <string name="settings_theme">主题</string>
     <string name="title_activity_settings">FHCode——环境</string>
-    <string name="shortcut_about">FHCode——环境</string>
+    <string name="shortcut_about">约 旦</string>
     <string name="title_activity_about">FHCode - About</string>
     <string name="settings_text_size">文本</string>
     <string name="features_heading">特点</string>

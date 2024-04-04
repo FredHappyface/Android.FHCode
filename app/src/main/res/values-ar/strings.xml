@@ -4,7 +4,7 @@
     <string name="shortcut_settings">الترتيبات</string>
     <string name="action_new_file">جديدة</string>
     <string name="settings_theme_radio1">الضوء</string>
-    <string name="action_about">FHCode - Settings</string>
+    <string name="action_about">بشأن</string>
     <string name="dialog_saved_title">أنقذوا!</string>
     <string name="shortcut_disabled">الإعاقة القصيرة</string>
     <string name="dialog_new_title">أصنع ملف جديد؟?</string>
@@ -18,7 +18,7 @@
     <string name="action_open">مفتوح</string>
     <string name="settings_theme">الموضوع</string>
     <string name="title_activity_settings">FHCode - Settings</string>
-    <string name="shortcut_about">FHCode - Settings</string>
+    <string name="shortcut_about">بشأن</string>
     <string name="title_activity_about">(فيكود)</string>
     <string name="settings_text_size">حجم النص</string>
     <string name="features_heading">المعالم</string>

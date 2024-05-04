@@ -31,7 +31,7 @@
     <string name="action_settings">Login</string>
     <string name="info_text">Code editor untuk android.</string>
     <string name="app_name">Login</string>
-    <string name="dialog_saved_button">LOGIN</string>
+    <string name="dialog_saved_button">Sitemap</string>
     <string name="features_text">- Buat, edit dan simpan file kode / teks
 \n- Syntax sorotan untuk Java, XML, Python menggunakan regex
 \n- 4 Tema: Cahaya, Gelap, Hitam, Auto

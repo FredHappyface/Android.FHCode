@@ -25,7 +25,7 @@
     <string name="license_heading">MIT الرخصة</string>
     <string name="action_save">أنقذ</string>
     <string name="settings_theme_radio4">النظام</string>
-    <string name="dialog_new_cancel">لا</string>
+    <string name="dialog_new_cancel">أنقذ</string>
     <string name="action_settings">الترتيبات</string>
     <string name="info_text">محررة الكويكب.</string>
     <string name="app_name">FHCode</string>

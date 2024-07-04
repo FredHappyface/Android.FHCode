@@ -31,11 +31,11 @@
     <string name="app_name">FHCode</string>
     <string name="dialog_saved_button">TAMAM TAMAM</string>
     <string name="features_text">Oluşturma, düzenleme ve kod / metin dosyaları kurtarma
-\n- Syntax Java, XML, Python için regex kullanarak vurgu yapıyor
+\n- Syntax Java, XML, Python için regex kullanarak vurgulanıyor
 \n- 4 Tema: Işık, Dark, Black, Auto
 \n- Configurable text büyüklüğü
 \n- Ayarlar için kısaltmalar, Yeni Dosya</string>
     <string name="shortcut_new_file">Yeni Dosya</string>
-    <string name="action_about">About</string>
-    <string name="shortcut_about">About</string>
+    <string name="action_about">FHCode - Ayarlar</string>
+    <string name="shortcut_about">FHCode - Ayarlar</string>
 </resources>

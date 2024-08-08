@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="settings_theme_radio2">Темный</string>
+    <string name="settings_theme_radio2">Тёмная</string>
     <string name="shortcut_settings">Настройка</string>
-    <string name="action_new_file">Новый файл</string>
-    <string name="settings_theme_radio1">Свет</string>
-    <string name="action_about">О</string>
+    <string name="action_new_file">Создать</string>
+    <string name="settings_theme_radio1">Светлая</string>
+    <string name="action_about">О программе</string>
     <string name="dialog_saved_title">Сохранено!</string>
-    <string name="shortcut_disabled">Ярлык отключен</string>
+    <string name="shortcut_disabled">Быстрый доступ отключен</string>
     <string name="links_heading">Ссылки</string>
     <string name="dialog_new_title">Создать новый файл\?</string>
     <string name="info_heading">Информация</string>
     <string name="action_save_as">Сохранить как</string>
-    <string name="settings_theme_radio3">Черный</string>
-    <string name="links_text">- Проект: https://github.com/FredHappyface/Android.FHCode
-\n- Лицензия: https://github.com/FredHappyface/Android.FHCode/blob/main/LICENSE.md</string>
-    <string name="blank_file_text">[Это пустой файл, открыть файл или отредактировать этот файл и сохранить]</string>
-    <string name="license_text">Авторское право © FredHappyface</string>
+    <string name="settings_theme_radio3">Чёрная</string>
+    <string name="links_text">1-я. - Проект здесь: <a href="https://github.com/FredHappyface/Android.FHCode"> на Github</a>
+\n2-я. - Лицензия тут: <a href="https://github.com/FredHappyface/Android.FHCode"> на Github</a></string>
+    <string name="blank_file_text">[Редактируйте, Открывайте, Сохраняйте.]</string>
+    <string name="license_text">Владелец © FredHappyface.</string>
     <string name="dialog_new_confirm">Да</string>
     <string name="action_open">Открыть</string>
-    <string name="settings_theme">Тема</string>
+    <string name="settings_theme">Оформление</string>
     <string name="title_activity_settings">FHCode - Настройки</string>
-    <string name="shortcut_about">О</string>
-    <string name="title_activity_about">FHCode - О</string>
-    <string name="settings_text_size">Размер текста</string>
-    <string name="features_heading">Особенности</string>
-    <string name="license_heading">MIT Лицензия</string>
+    <string name="shortcut_about">О программе</string>
+    <string name="title_activity_about">FHCode - О программе</string>
+    <string name="settings_text_size">Размер шрифта</string>
+    <string name="features_heading">Функционал</string>
+    <string name="license_heading">Лицензия MIT</string>
     <string name="action_save">Сохранить</string>
-    <string name="settings_theme_radio4">Система</string>
+    <string name="settings_theme_radio4">Системная</string>
     <string name="dialog_new_cancel">Нет</string>
     <string name="action_settings">Настройка</string>
-    <string name="info_text">Редактор кода для Android.</string>
+    <string name="info_text">Редактор кода/текста для android.</string>
     <string name="app_name">FHCode</string>
-    <string name="dialog_saved_button">ХОРОШО</string>
-    <string name="features_text">- Создание, редактирование и сохранение текстовых файлов
-\n- Синтаксис для Java, XML, Python с помощью regex
-\n- 4 Темы: Свет, Темный, Черный, Авто
-\n- Настраиваемый размер текста
-\n- Заказчики для настроек, О новых файлах</string>
-    <string name="shortcut_new_file">Новый файл</string>
+    <string name="dialog_saved_button">ОК</string>
+    <string name="features_text">1-й. - Создание, изменения и сохранение файлов кода/текста.
+\n2-й. - Подсветка синтаксиса для Java, XML, Python с использованием регулярных выражений.
+\n3-й. - Оформление из 4-рёх тем: Светлая, Тёмная, Чёрная, Системная.
+\n4-й. - Подобрать размер шрифта.
+\n5-й. - Зажим и держи значок для быстрого доступа к функциям: Создать, Настройки, О программе.</string>
+    <string name="shortcut_new_file">Создать</string>
 </resources>
